@@ -1,0 +1,276 @@
+/********************************************************
+	
+				CONTENTS LIST
+	
+*********************************************************
+
+    01.00 GENERAL & BASIC STYLES
+		01.01 - TYPOGRAPHY   
+		01.02 - LAYOUT                 
+	02.00 MAIN HOMEPAGE
+		02.01 - 통합스타일
+		02.02 - Section1 About
+		02.03 - Section2 Philosophy
+		02.04 - Section3 Output
+		02.05 - Section4 Contact
+
+*********************************************************/
+
+/*---------------------------------------------------
+
+    01.00 - GENERAL & BASIC STYLES
+    
+    Font Size : 13px, 16px, 20px, 24px ...
+
+---------------------------------------------------*/
+
+/* 	본문 폰트 : 영문 Montserrat, 한글 노토 산스 */
+body, div, a, span, p, input, td, label, li, b{
+    font-family: 'Noto Sans KR', sans-serif;
+}
+
+/* 	제목 폰트 : 영문 Montserrat, 한글 나눔스퀘어 */
+h1, h2, h3, h4, h5, h6, h1 a, h2 a, h3 a, h4 a, h5 a, h6 a, .header a,
+strong, b, textarea, select, input{
+    font-family: 'Noto Sans KR', sans-serif !important;
+    word-break: keep-all;
+    line-height: 1.6em;
+}
+
+a, a:focus{
+    outline: 0 !important;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+h1, h2, h3, h4, h5, h6, p {
+    letter-spacing: -0.02em;
+    word-break: keep-all;
+    line-height: 1.6em;
+}
+
+strong, b {
+    font-weight: 700 !important;
+    line-height: 1.6em;
+}
+
+.cursor{
+    cursor: pointer;
+}
+/*---------------------------------------------------
+    01.02 - LAYOUT  
+---------------------------------------------------*/
+@include media("max-width: 980px"){
+	#page-container #main-header{position: fixed;}
+}
+@include pagei-sideNav-style1-left('#333','#fff','#fff');
+/*---------------------------------------------------
+
+    02.00 MAIN HOMEPAGE
+    
+---------------------------------------------------*/
+// fullpage css setting
+body.home{
+	.et_pb_row{max-width: none;padding: 0;}
+	.et_pb_section{padding: 0;}
+}
+@include media("max-width: 980px"){
+	body.home #fp-nav{
+		display: none;
+	}
+}
+// section
+body.home #et-boc .slide{
+	padding-left:48px;
+	padding-right: 48px;
+}
+
+.fp-controlArrow{display: none;}
+.fp-slidesNav.fp-bottom{
+	text-align: center;
+}
+
+.fp-tableCell > div{
+	height: 100%;
+	max-height: 780px;
+	
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+}
+
+// 
+body.et_vertical_nav #et-main-area{margin-left: 0 !important;}
+#main-header{display: none;}
+
+/*---------------------------------------------------
+    02.01 - 통합스타일
+---------------------------------------------------*/
+.style1_title{
+	font-size: 28px;
+    color: #444444;
+    font-family: "y9 Gotham";
+    font-weight: 300;
+    letter-spacing: .3em;
+}
+.style2_title{
+	font-size: 80px;
+	text-align: right;
+	font-family: "y9 Gotham", "Noto Sans";
+	letter-spacing: .32em;
+	line-height: .9em;
+}
+.style3_title{
+	font-size: 21px;
+    color: white;
+}
+.style4_title{
+	font-size: 24px;
+    font-weight: bold;
+    color: #fff;
+    padding-bottom: 5px;
+}
+.divider{
+	height: 3px;
+	background: #fff;
+	width: 100%;
+	margin: auto;
+}
+/*---------------------------------------------------
+    02.02 - Section1 About
+---------------------------------------------------*/
+
+// 공통으로 사용될일 없음
+.about{
+	width: 100%;
+}
+.about .et_pb_code_inner{
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+
+	// about slide 1 block
+	.block1{
+		margin-bottom: 12px;
+		position: relative;
+	}
+	.block2{
+		position: relative;
+	}
+}
+
+// about slide 2 block
+.history{
+	p{
+		padding-left: 14px;
+		padding-bottom: 14px;
+	}
+}
+/*---------------------------------------------------
+    02.03 - Section2 Philosophy
+---------------------------------------------------*/
+
+#Philosophy{
+	.divider{
+		width: 168px;
+	}
+
+	.style4_title{
+		display: inline-block;
+		text-align: center;
+		width: 100%;
+		font-size: 24px;
+	}
+
+	.block3 .fp-tableCell > div{
+		justify-content: flex-end;
+		align-items: flex-end;
+		.et_pb_text{
+			max-width: 520px;
+			padding-bottom: 60px;
+		}
+	}
+}
+
+/*---------------------------------------------------
+    02.04 - Section3 Output
+---------------------------------------------------*/
+#Output{
+	.fp-tableCell .et_pb_row{
+		width: 100%;
+		max-height: none;
+		height: 100%;
+		.et_pb_column, .et_pb_module, .et_pb_code_inner, .depth_card, .depth_container{
+			height: 100%;
+		}
+		.depth_container{
+			align-items: center;
+		}
+	}
+	.scroll-down-wrap{
+		position: absolute;
+		bottom: 5%;
+		left: 50%;
+		transform: translateX(-50%);
+		width: 80%;
+		display: flex;
+		justify-content: flex-end;
+
+		i{
+			font-size: 18px;
+			padding-right: 4px;
+			color: #000;
+		}
+		@import 'scroll_down.scss';
+	}
+}
+/*---------------------------------------------------
+    02.05 - Section4 Contact
+---------------------------------------------------*/
+$footer_height : 188px !important;
+#Contact{
+	height: $footer_height;
+	padding-top: 40px;
+
+	> .fp-tableCell{height: $footer_height;
+		
+		>div{justify-content: flex-start;}
+	}
+
+	h1{color: #000;}
+	ul.social_contact{
+		padding: 0;
+		display: flex;
+		list-style: none;
+
+		li{
+			margin-right: 24px;
+			a{color: #000;}
+		}
+	}
+	i{
+		font-size: 18px;
+		padding-right: 4px;
+		color: #000;
+	}
+
+	.content_wrap{
+		display: flex;
+		justify-content: space-between;
+	}
+	@import 'scroll_down.scss';
+}
+
+/*---------------------------------------------------
+    02.06 - Section4 instagram
+---------------------------------------------------*/
+$sns_height : auto !important;
+#instagram{
+	height: $sns_height;
+
+	.et_pb_row{width: 100%;}
+	> .fp-tableCell{height: $sns_height;}
+}
