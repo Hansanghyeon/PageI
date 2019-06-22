@@ -1,23 +1,11 @@
-/**************************
-
-    대체하고 삭제영역
-
-    __PROJECT_NAME__
-
-    // slack upload
-    __WEBHOOK_URL__
-    __CDN_URL__
-
-***************************/
-
 // gulpfile.js
 const gulp = require('gulp');
 
 // 프로젝트명
-const PROJECT = '__PROJECT_NAME__';
+const PROJECT = 'pagei';
 
 // cdn url
-var CDN_URL = '__CDN_URL__';
+var CDN_URL = 'https://cdn.4log.dev';
 
 // gulp plugin
 const   sass 			= require('gulp-sass'),
@@ -31,12 +19,12 @@ const   sass 			= require('gulp-sass'),
         rename 			= require('gulp-rename');
 
 // dev import
-const   key             = require('./.secret/key.js');
+const   key             = require('./key.js');
 
 // gulp notice plugin Slack
 // webhook url list
 const slack_dataset = {
-    'space' : '__WEBHOOK_URL__',
+    'space' : key.SLACK.webhook,
     // vscode       : https://github.com/vscode-icons/vscode-icons/tree/master/icons
     // meterial     : https://github.com/PKief/vscode-material-icon-theme/tree/master/icons
     'icon_url' : {
@@ -127,7 +115,7 @@ function sass_mix(){
         // output
         .pipe(gulp.dest('../public/css/'));
 
-    return s3_upload(before, 'string tpye!');
+    return s3_upload(before, 'css');
 }
 // 분리형 scss
 function sass_single(){
@@ -162,7 +150,7 @@ function sass_single(){
         // output
         .pipe(gulp.dest('../public/css/'))
     
-    return s3_upload(before, 'string tpye!');
+    return s3_upload(before, 'css');
 }
 
 // Babel
@@ -194,7 +182,7 @@ function babel(){
         .pipe(sourcemaps.write())
         .pipe(gulp.dest('../public/js/'));
 
-    return s3_upload(before, 'string tpye!');
+    return s3_upload(before, 'js');
 }
 
 // TypeScript
@@ -226,7 +214,7 @@ function typescript(){
 		.pipe(sourcemaps.write())
         .pipe(gulp.dest('../public/js/'));
 
-    return s3_upload(before, 'string tpye!');
+    return s3_upload(before, 'js');
 }
 
 // Crossbrowser
@@ -237,7 +225,7 @@ function cross_browser(){
         .pipe(rename('style.min.css'))
         .pipe(gulp.dest('../public/css/'));
 
-    return s3_upload(before, 'string tpye!');
+    return s3_upload(before, 'css');
 }
 
 // watch
