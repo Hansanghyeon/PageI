@@ -2,7 +2,7 @@
 const gulp = require('gulp');
 
 // 프로젝트명
-const PROJECT = 'pagei';
+const PROJECT = 'PageI';
 
 // cdn url
 var CDN_URL = 'https://cdn.4log.dev';
