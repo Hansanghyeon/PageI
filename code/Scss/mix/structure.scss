@@ -90,3 +90,16 @@
 		width: 90%;
 	}
 }
+
+body .et_pb_section{
+	padding-top: 0;
+}
+// footer
+body #footer-widgets{
+	padding: 20px 0;
+}
+.et_pb_gutters3.et_pb_footer_columns4 .footer-widget{
+	margin-bottom: 0;
+}
+// footer bottom
+#footer-bottom{ display: none !important; }
