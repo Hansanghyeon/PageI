@@ -18,7 +18,9 @@
 	#page-container #main-header{position: fixed;}
 }
 @include pagei-sideNav-style1-left('#333','#fff','#fff');
-
+html p{
+	margin-bottom: .3em;
+}
 /*---------------------------------------------------
     01.00 MAIN HOMEPAGE
 ---------------------------------------------------*/
@@ -125,7 +127,6 @@ body.et_vertical_nav #et-main-area{margin-left: 0 !important;}
 .history{
 	p{
 		padding-left: 14px;
-		padding-bottom: 14px;
 	}
 }
 /*---------------------------------------------------
