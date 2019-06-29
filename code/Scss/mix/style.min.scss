@@ -1,5 +1,6 @@
 @import 'mixin.scss';
-@import 'default.scss';
+html{@import 'default.scss';}
+@import 'fullpage.scss';
 @import 'structure.scss';
 @import 'main.scss';
 @import 'depth_card.scss';

@@ -1,0 +1,77 @@
+/********************************************************
+
+	fullpage 관련
+
+---------------------------------------------------------
+
+	01.00 - Section Nav
+
+*********************************************************/
+
+/*---------------------------------------------------
+	01.00 - Section Nav
+---------------------------------------------------*/
+@mixin pagei-sideNav-style1($li_bg, $active_li_bg, $tooltip_color){
+	$li_bg : #{$li_bg};
+	$active_li_bg : #{$active_li_bg};
+	$tooltip_color : #{$tooltip_color};
+
+	#fp-nav.fp-pagei-sideNav-style1 {
+		right: 20px;
+		// structure
+		ul li {
+			width: 15px;
+			height: 30px;
+			margin-left: 0;
+			margin-right: 0;
+			display: flex;
+	
+			a {
+				position: relative;
+				display: flex;
+				justify-content: center;
+			}
+	
+			span:nth-of-type(2) {
+				border-radius: 0;
+				height: 100% !important;
+				width: 2px;
+				left: auto;
+				top: auto;
+				margin: 0;
+			}
+	
+			a span:nth-of-type(1) {
+				display: none;
+			}
+	
+			.fp-tooltip {
+				right: 24px;
+				top: 50%;
+				transform: translateY(-50%);
+				color: $tooltip_color;
+			}
+	
+			a.active+.fp-tooltip {
+				opacity: 1;
+				width: auto;
+			}
+	
+			span{
+				background: $li_bg;
+			}
+			a.active span {
+				&:nth-of-type(1) {
+					opacity: 1;
+				}
+	
+				&:nth-of-type(2) {
+					margin: 0;
+					width: 6px;
+					border-radius: 9999px;
+					background: $active_li_bg;
+				}
+			}
+		}
+	}
+}
