@@ -15,6 +15,41 @@
 	01.00 - TYPOGRAPHY
 ---------------------------------------------------*/
 
+/* 	본문 폰트 : 영문 Montserrat, 한글 노토 산스 */
+body, div, a, span, p, input, td, label, li, b{
+    font-family: 'Noto Sans KR', sans-serif;
+}
+
+/* 	제목 폰트 : 영문 Montserrat, 한글 나눔스퀘어 */
+h1, h2, h3, h4, h5, h6, h1 a, h2 a, h3 a, h4 a, h5 a, h6 a, .header a,
+strong, b, textarea, select, input{
+    font-family: 'Noto Sans KR', sans-serif !important;
+    word-break: keep-all;
+    line-height: 1.6em;
+}
+
+a, a:focus{
+    outline: 0 !important;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+h1, h2, h3, h4, h5, h6, p {
+    letter-spacing: -0.02em;
+    word-break: keep-all;
+    line-height: 1.6em;
+}
+
+strong, b {
+    font-weight: 700 !important;
+    line-height: 1.6em;
+}
+
+.cursor{
+    cursor: pointer;
+}
 
 /*---------------------------------------------------
 	02.00 - BUTTON, etc ...

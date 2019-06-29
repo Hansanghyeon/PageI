@@ -4,72 +4,23 @@
 	
 *********************************************************
 
-    01.00 GENERAL & BASIC STYLES
-		01.01 - TYPOGRAPHY   
-		01.02 - LAYOUT                 
-	02.00 MAIN HOMEPAGE
-		02.01 - 통합스타일
-		02.02 - Section1 About
-		02.03 - Section2 Philosophy
-		02.04 - Section3 Output
-		02.05 - Section4 Contact
+	01.00 MAIN HOMEPAGE
+		01.01 - 통합스타일
+		01.02 - Section1 About
+		01.03 - Section2 Philosophy
+		01.04 - Section3 Output
+		01.05 - Section4 Contact
+		01.06 - Section4 instagram
 
 *********************************************************/
 
-/*---------------------------------------------------
-
-    01.00 - GENERAL & BASIC STYLES
-    
-    Font Size : 13px, 16px, 20px, 24px ...
-
----------------------------------------------------*/
-
-/* 	본문 폰트 : 영문 Montserrat, 한글 노토 산스 */
-body, div, a, span, p, input, td, label, li, b{
-    font-family: 'Noto Sans KR', sans-serif;
-}
-
-/* 	제목 폰트 : 영문 Montserrat, 한글 나눔스퀘어 */
-h1, h2, h3, h4, h5, h6, h1 a, h2 a, h3 a, h4 a, h5 a, h6 a, .header a,
-strong, b, textarea, select, input{
-    font-family: 'Noto Sans KR', sans-serif !important;
-    word-break: keep-all;
-    line-height: 1.6em;
-}
-
-a, a:focus{
-    outline: 0 !important;
-}
-
-a:hover {
-    text-decoration: none;
-}
-
-h1, h2, h3, h4, h5, h6, p {
-    letter-spacing: -0.02em;
-    word-break: keep-all;
-    line-height: 1.6em;
-}
-
-strong, b {
-    font-weight: 700 !important;
-    line-height: 1.6em;
-}
-
-.cursor{
-    cursor: pointer;
-}
-/*---------------------------------------------------
-    01.02 - LAYOUT  
----------------------------------------------------*/
 @include media("max-width: 980px"){
 	#page-container #main-header{position: fixed;}
 }
 @include pagei-sideNav-style1-left('#333','#fff','#fff');
-/*---------------------------------------------------
 
-    02.00 MAIN HOMEPAGE
-    
+/*---------------------------------------------------
+    01.00 MAIN HOMEPAGE
 ---------------------------------------------------*/
 // fullpage css setting
 body.home{
@@ -111,7 +62,7 @@ body.et_vertical_nav #et-main-area{margin-left: 0 !important;}
 #main-header{display: none;}
 
 /*---------------------------------------------------
-    02.01 - 통합스타일
+    01.01 - 통합스타일
 ---------------------------------------------------*/
 .style1_title{
 	font-size: 28px;
@@ -148,7 +99,7 @@ body.et_vertical_nav #et-main-area{margin-left: 0 !important;}
 	margin: auto;
 }
 /*---------------------------------------------------
-    02.02 - Section1 About
+    01.02 - Section1 About
 ---------------------------------------------------*/
 
 // 공통으로 사용될일 없음
@@ -178,7 +129,7 @@ body.et_vertical_nav #et-main-area{margin-left: 0 !important;}
 	}
 }
 /*---------------------------------------------------
-    02.03 - Section2 Philosophy
+    01.03 - Section2 Philosophy
 ---------------------------------------------------*/
 
 #Philosophy{
@@ -205,7 +156,7 @@ body.et_vertical_nav #et-main-area{margin-left: 0 !important;}
 }
 
 /*---------------------------------------------------
-    02.04 - Section3 Output
+    01.04 - Section3 Output
 ---------------------------------------------------*/
 #Output{
 	.fp-tableCell{
@@ -266,7 +217,7 @@ body.et_vertical_nav #et-main-area{margin-left: 0 !important;}
 	}
 }
 /*---------------------------------------------------
-    02.05 - Section4 Contact
+    01.05 - Section4 Contact
 ---------------------------------------------------*/
 $footer_height : 188px !important;
 #Contact{
@@ -305,7 +256,7 @@ $footer_height : 188px !important;
 }
 
 /*---------------------------------------------------
-    02.06 - Section4 instagram
+    01.06 - Section4 instagram
 ---------------------------------------------------*/
 $sns_height : auto !important;
 #instagram{
