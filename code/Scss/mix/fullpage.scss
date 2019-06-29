@@ -75,3 +75,14 @@
 		}
 	}
 }
+@mixin pagei-sideNav-style1-left($li_bg, $active_li_bg, $tooltip_color){
+	@include pagei-sideNav-style1(#{$li_bg}, #{$active_li_bg}, #{$tooltip_color});
+	#fp-nav.fp-pagei-sideNav-style1{
+		right: auto;
+		left : 20px;
+		ul li .fp-tooltip{
+			right: auto;
+			left: 24px;
+		}
+	}
+}
