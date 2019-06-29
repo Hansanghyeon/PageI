@@ -1,7 +1,7 @@
 (function ($) {
 
 	new fullpage('.home #et-boc', {
-		sectionsColor: ['#999', '#888', '#777', '#666', '#555'],
+		sectionsColor: ['#999', '#888', '#777', '#fff', '#555'],
 		parallax: true,
 
 		// Navigation
