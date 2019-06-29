@@ -53,8 +53,18 @@ Vue.component('card', {
 	},
 	methods: {
 		handleMouseMove(e) {
-			this.mouseX = e.pageX - this.$refs.card.offsetLeft - this.width / 2;
-			this.mouseY = e.pageY - this.$refs.card.offsetTop - this.height / 2;
+			if(jQuery('#Output .fp-scroller').length != 0){
+				var modified = jQuery('#Output .fp-scroller').css('transform');
+				var vel = modified.substring(22, modified.length-1);
+				vel = vel.replace('-', '');
+				vel = Number(vel);
+
+				this.mouseX = e.pageX - this.$refs.card.offsetLeft - this.width / 2;
+				this.mouseY = e.pageY - this.$refs.card.offsetTop - this.height / 2 + vel;
+			}else{
+				this.mouseX = e.pageX - this.$refs.card.offsetLeft - this.width / 2;
+				this.mouseY = e.pageY - this.$refs.card.offsetTop - this.height / 2;
+			}
 		},
 		handleMouseEnter() {
 			clearTimeout(this.mouseLeaveDelay);
