@@ -73,3 +73,20 @@
 		}
 	}
 }
+
+// Fullpage
+.fp-section.fp-table, .fp-slide.fp-table{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.fp-tableCell{
+	max-width: 1080px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+
+	@include respond-to('large'){
+		width: 90%;
+	}
+}
