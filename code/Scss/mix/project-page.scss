@@ -11,10 +11,16 @@
 /*---------------------------------------------------
     01.00 Butterfleye
 ---------------------------------------------------*/
-.hero_wrap{
-	padding-top: 0 !important;
+.hero_wrap {
+  padding-top: 0 !important;
 }
-.img_wrap_section{
-	.et_pb_column:nth-of-type(1) img{padding-right: 100px;}
-	.et_pb_column:nth-of-type(2) img{padding-left: 100px;}
+
+.img_wrap_section {
+  .et_pb_column:nth-of-type(1) img {
+    padding-right: 100px;
+  }
+
+  .et_pb_column:nth-of-type(2) img {
+    padding-left: 100px;
+  }
 }

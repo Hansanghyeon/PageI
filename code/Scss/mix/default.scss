@@ -16,82 +16,116 @@
 ---------------------------------------------------*/
 
 /* 	본문 폰트 : 영문 Montserrat, 한글 노토 산스 */
-body, div, a, span, p, input, td, label, li, b{
-    font-family: 'Noto Sans KR', sans-serif;
+body,
+div,
+a,
+span,
+p,
+input,
+td,
+label,
+li,
+b {
+  font-family: 'Noto Sans KR', sans-serif;
 }
 
 /* 	제목 폰트 : 영문 Montserrat, 한글 나눔스퀘어 */
-h1, h2, h3, h4, h5, h6, h1 a, h2 a, h3 a, h4 a, h5 a, h6 a, .header a,
-strong, b, textarea, select, input{
-    font-family: 'Noto Sans KR', sans-serif !important;
-    word-break: keep-all;
-    line-height: 1.6em;
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+h1 a,
+h2 a,
+h3 a,
+h4 a,
+h5 a,
+h6 a,
+.header a,
+strong,
+b,
+textarea,
+select,
+input {
+  font-family: 'Noto Sans KR', sans-serif !important;
+  word-break: keep-all;
+  line-height: 1.6em;
 }
 
-a, a:focus{
-    outline: 0 !important;
+a,
+a:focus {
+  outline: 0 !important;
 }
 
 a:hover {
-    text-decoration: none;
+  text-decoration: none;
 }
 
-h1, h2, h3, h4, h5, h6, p {
-	padding-bottom: 0;
-    letter-spacing: -0.02em;
-    word-break: keep-all;
-	line-height: 1.6em;
-	margin-bottom: .8em;
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  padding-bottom: 0;
+  letter-spacing: -0.02em;
+  word-break: keep-all;
+  line-height: 1.6em;
+  margin-bottom: .8em;
 }
 
-strong, b {
-    font-weight: 700 !important;
-    line-height: 1.6em;
+strong,
+b {
+  font-weight: 700 !important;
+  line-height: 1.6em;
 }
 
-.cursor{
-    cursor: pointer;
+.cursor {
+  cursor: pointer;
 }
 
 /*---------------------------------------------------
 	02.00 - BUTTON, etc ...
 ---------------------------------------------------*/
 // divider
-.point-divider{
-	width: 30px;
-	height: 5px;
-	border-radius: 999px;
+.point-divider {
+  width: 30px;
+  height: 5px;
+  border-radius: 999px;
 }
-.style1{
-	$list1 : #524471, #f66b6e;
-	background: linear-gradient(to right,$list1);
+
+.style1 {
+  $list1: #524471, #f66b6e;
+  background: linear-gradient(to right, $list1);
 }
 
 // scroll down button
 .scroll-down {
-	width: 32px;
-	height: 54px;
-	border: 2px solid #000;
-	border-radius: 999px;
-	z-index: 2;
-	-webkit-animation: bounce 2s infinite 2s;
-	animation: bounce 2s infinite 2s;
-	-webkit-transition: all .2s ease-in;
-	transition: all .2s ease-in;
-	font-size:0;
-	line-height: 0;
-	display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-between;
-    padding-top: 9px;
-	padding-bottom: 2px;
-	cursor: pointer;
-	
-	i{
-		color: #000;
-		padding: 0;
-	}
+  width: 32px;
+  height: 54px;
+  border: 2px solid #000;
+  border-radius: 999px;
+  z-index: 2;
+  -webkit-animation: bounce 2s infinite 2s;
+  animation: bounce 2s infinite 2s;
+  -webkit-transition: all .2s ease-in;
+  transition: all .2s ease-in;
+  font-size: 0;
+  line-height: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 9px;
+  padding-bottom: 2px;
+  cursor: pointer;
+
+  i {
+    color: #000;
+    padding: 0;
+  }
 }
 
 
@@ -100,26 +134,26 @@ strong, b {
 ---------------------------------------------------*/
 @keyframes bounce {
 
-	0%,
-	100%,
-	20%,
-	50%,
+  0%,
+  100%,
+  20%,
+  50%,
 
-	40% {
-		-webkit-transform: translateY(-10px);
-		-ms-transform: translateY(-10px);
-		transform: translateY(-10px);
-	}
+  40% {
+    -webkit-transform: translateY(-10px);
+    -ms-transform: translateY(-10px);
+    transform: translateY(-10px);
+  }
 
-	60% {
-		-webkit-transform: translateY(-5px);
-		-ms-transform: translateY(-5px);
-		transform: translateY(-5px);
-	}
+  60% {
+    -webkit-transform: translateY(-5px);
+    -ms-transform: translateY(-5px);
+    transform: translateY(-5px);
+  }
 
-	80% {
-		-webkit-transform: translateY(0);
-		-ms-transform: translateY(0);
-		transform: translateY(0);
-	}
+  80% {
+    -webkit-transform: translateY(0);
+    -ms-transform: translateY(0);
+    transform: translateY(0);
+  }
 }
