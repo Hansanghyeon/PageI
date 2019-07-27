@@ -153,6 +153,16 @@ body.et_vertical_nav #et-main-area {
 
 // about slide 2 block
 .history {
+  @include respond-to('large') {
+    .fp-tableCell {
+      width: 100%;
+    }
+  }
+
+  .fp-scroller {
+    padding: 60px 5% 200px;
+  }
+
   p {
     padding-left: 14px;
   }
@@ -300,7 +310,6 @@ $footer_height : 188px !important;
 
   i {
     font-size: 18px;
-    padding-right: 4px;
     color: #000;
   }
 
