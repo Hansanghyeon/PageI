@@ -9,7 +9,7 @@
 
 *********************************************************/
 
-@import url('https://fonts.googleapis.com/css?family=Noto+Sans+KR:300,400,700');
+@import url("https://fonts.googleapis.com/css?family=Noto+Sans+KR:300,400,700");
 
 /*---------------------------------------------------
 	01.00 - TYPOGRAPHY
@@ -26,7 +26,7 @@ td,
 label,
 li,
 b {
-  font-family: 'Noto Sans KR', sans-serif;
+  font-family: "Noto Sans KR", sans-serif;
 }
 
 /* 	제목 폰트 : 영문 Montserrat, 한글 나눔스퀘어 */
@@ -48,7 +48,7 @@ b,
 textarea,
 select,
 input {
-  font-family: 'Noto Sans KR', sans-serif !important;
+  font-family: "Noto Sans KR", sans-serif !important;
   word-break: keep-all;
   line-height: 1.6em;
 }
@@ -73,7 +73,7 @@ p {
   letter-spacing: -0.02em;
   word-break: keep-all;
   line-height: 1.6em;
-  margin-bottom: .8em;
+  margin-bottom: 0.8em;
 }
 
 strong,
@@ -96,9 +96,17 @@ b {
   border-radius: 999px;
 }
 
+.style0 {
+  background: #363b46;
+}
 .style1 {
-  $list1: #524471, #f66b6e;
+  $list1: #524471, #b3ccd7;
   background: linear-gradient(to right, $list1);
+}
+
+.style2 {
+  $list: #e89a6d, #a69c94, #373b45;
+  background: linear-gradient($list);
 }
 
 // scroll down button
@@ -110,8 +118,8 @@ b {
   z-index: 2;
   -webkit-animation: bounce 2s infinite 2s;
   animation: bounce 2s infinite 2s;
-  -webkit-transition: all .2s ease-in;
-  transition: all .2s ease-in;
+  -webkit-transition: all 0.2s ease-in;
+  transition: all 0.2s ease-in;
   font-size: 0;
   line-height: 0;
   display: flex;
@@ -128,17 +136,14 @@ b {
   }
 }
 
-
 /*---------------------------------------------------
 	03.00 - adnimation
 ---------------------------------------------------*/
 @keyframes bounce {
-
   0%,
   100%,
   20%,
   50%,
-
   40% {
     -webkit-transform: translateY(-10px);
     -ms-transform: translateY(-10px);
