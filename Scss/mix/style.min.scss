@@ -1,14 +1,14 @@
-@import 'mixin.scss';
+@import 'utiles';
 
 html {
-  @import 'default.scss';
+  @import 'default';
 }
 
-@import 'fullpage.scss';
-@import 'structure.scss';
-@import 'main.scss';
-@import 'depth_card.scss';
+@import 'fullpage';
+@import 'structure';
+@import 'main';
+@import 'depth_card';
 
 // page
-@import 'project-page.scss';
-@import 'moduleGoggle.scss';
+@import 'project-page';
+@import 'moduleGoggle';
