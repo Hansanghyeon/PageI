@@ -1,0 +1,14 @@
+/********************************************************
+
+        CONTENTS LIST
+
+*********************************************************/
+
+.titleSub{
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+
+  h3{margin: 0};
+  span{color: #999;}
+}
