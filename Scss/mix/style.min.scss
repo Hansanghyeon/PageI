@@ -10,5 +10,7 @@ html {
 @import 'depth_card';
 
 // page
-@import 'project-page';
-@import 'moduleGoggle';
+@import './project/default';
+@import './project/butterfleye';
+@import './project/moduleGoggle';
+@import './project/cube';
