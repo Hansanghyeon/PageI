@@ -57,8 +57,10 @@ body.page-id-473 {
 
   .img_wrap {
     padding-bottom: 0;
-    margin-bottom: 10%;
 
+    &.op0 img{
+      opacity: 0;
+    }
     .et_pb_image {
       margin-bottom: 0;
     }
