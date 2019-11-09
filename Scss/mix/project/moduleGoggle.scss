@@ -9,80 +9,95 @@
 *********************************************************/
 
 body.page-id-473 {
-  background: #d3d3d3;
-  color: #b4b4b4;
-
-  .et_pb_section {
-    background: transparent;
-    padding-bottom: 0;
+  background-color: #e3e6e9 ;
+}
+.template.moduleGoggle {
+  .pointTextColor{color: $cc1}
+  .divider {
+    width: 15px;
+    height: 1px;
+    border-radius: 999px;
+    margin: 0;
   }
-
-  .title_section_wrap {
-    padding: calc(150px - 2%) 0;
-
-    .title_section {
-      margin: 0 !important;
-    }
+  .divider-00 {
+    background-color: #8d9299;
   }
+  img {width: 100%;}
+}
 
-  .et_pb_row.pointBG {
-    background: #373b45;
+// --- Let's Coding! ---
+.template.moduleGoggle {
+  color: #8d9299;
+
+  // Atoms
+  $headingColor : #454b56;
+  .heading1 {font-size: 48px;}
+  .heading2 {
+    font-size: 30px;
+    letter-spacing: .2em;
   }
-
-  .gradient-bar {
-    display: inline-block;
-    width: 3px;
-    height: 378px;
-    background: linear-gradient(#e89a6d, #a69c94, #373b45);
-    margin: 60px 0;
+  div[class*='heading'] {
+    color: $headingColor;
   }
+  // mo
+  .projectInfo {
+    color: $headingColor;
 
-  .overflow_hidden_wrap {
-    overflow: hidden;
-
-    .content_divider {
-      color: inherit;
-      padding-left: 5%;
-      font-size: 18px;
+    span {
       display: inline-block;
-      border-top: 1px solid #4e5361;
-      font-weight: bold;
-
-      .divider {
-        border-top: 3px solid #4e5361;
-        margin-bottom: 4px;
+    }
+    // Atom
+    .title {
+      letter-spacing: .1em;
+      line-height: 1;
+    }
+    // Atom
+    .type {
+      font-weight: 100;
+      letter-spacing: .05em;
+      color: #8d9299;
+    }
+    // Atom
+    .describe {
+      font-size: 24px;
+      letter-spacing: .05em;
+      position: relative;
+      display: inline-block;
+      .type {
+        position: absolute;
+        right: 0;
+        bottom: calc(100% + 1.5rem);
+        font-size: 14px;
       }
     }
   }
 
-  .img_wrap {
-    padding-bottom: 0;
+  // mol content
+  .projectContent {
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 1.7em;
 
-    &.op0 img{
-      opacity: 0;
+    span {
+      display: inline;
+      @include respond-to('lg') {
+        display: block;
+      }
     }
-    .et_pb_image {
-      margin-bottom: 0;
+    .title {
+      font-size: 1.2em;
+      color: $headingColor;
+      &.main {
+        font-size: 1.7em;
+      }
+      span {
+        display: inline;
+      }
+    }
+    .smail {
+      font-size: .9em;
     }
   }
 
-  .img_position_custom img {
-    position: fixed;
-    max-width: 220px;
-    top: 50%;
-    left: 50%;
-    opacity: 1;
-    transition: all 0.1s;
-    transform: translate(-50%, -50%);
-  }
-
-  .overlay_module {
-    position: absolute;
-    z-index: 2;
-    width: 100%;
-  }
-
-  .et_pb_text_inner p {
-    color: #b4b4b4;
-  }
+  // mol
 }
