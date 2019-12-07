@@ -1,17 +1,10 @@
-/********************************************************
-  
-        CONTENTS LIST
-  
-*********************************************************
+@import '../../Scss/mix/utiles.scss';
 
-  01.00 Module Goggle
-
-*********************************************************/
-
-body.page-id-473 {
-  background-color: #e3e6e9 ;
+body {
+  background: #38404C;
 }
 .template.moduleGoggle {
+  background: #e3e6e9;
   .pointTextColor{color: $cc1}
   .divider {
     width: 15px;
@@ -23,30 +16,6 @@ body.page-id-473 {
     background-color: #8d9299;
   }
   img {width: 100%;}
-}
-
-// --- Let's Coding! ---
-.hero {
-  height: 100vh;
-  min-height: 400px;
-  overflow: hidden;
-  background-color: #3c4150;
-  position: relative;
-
-  .layerPopup {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    background: rgba(0,0,0,.5);
-    opacity: 1;
-    transition: all .5s ease-in-out;
-    &.ended {
-      opacity: 0;
-    }
-    video {
-      border-radius: 8px;
-    }
-  }
 }
 
 .template.moduleGoggle {
@@ -216,7 +185,6 @@ body.page-id-473 {
       color: #454B56;
       .title {
         font-size: 48px;
-        line-height: 1.2em;
       }
       .thankyou {
         margin-top: 200px;
