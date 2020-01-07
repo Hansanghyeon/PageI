@@ -8,9 +8,9 @@
     navigation: true,
     navigationPosition: "pagei-sideNav-style1",
     navigationTooltips: [
+      "Output",
       "About me",
       "Philosophy",
-      "Output",
       "Contact",
       "Instagram"
     ],

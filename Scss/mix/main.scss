@@ -20,7 +20,7 @@
   }
 }
 
-@include pagei-sideNav-style1-left('#333', '#fff', '#fff');
+@include pagei-sideNav-style1-left('#333', '#000', '#000');
 
 html p {
   margin-bottom: .3em;
@@ -90,7 +90,7 @@ body.et_vertical_nav #et-main-area {
 .style1_title {
   font-size: 28px;
   color: #444444;
-  font-family: "y9 Gotham";
+  font-family: "y9 Gotham", "Noto Sans";
   font-weight: 300;
   letter-spacing: .3em;
 }
@@ -109,7 +109,7 @@ body.et_vertical_nav #et-main-area {
 
 .style3_title {
   font-size: 21px;
-  color: white;
+  color: black;
 }
 
 .style4_title {
@@ -130,9 +130,34 @@ body.et_vertical_nav #et-main-area {
     01.02 - Section1 About
 ---------------------------------------------------*/
 
+body .profile {
+  background-image: url(https://s3-ap-northeast-2.amazonaws.com/pagei/KakaoTalk_Photo_2019-12-14-15-21-40.png);
+  background-size: cover;
+  background-position-x: 10%;
+  @include respond-to('md') {
+    background-position-x: right;
+    background-image: url(https://s3-ap-northeast-2.amazonaws.com/pagei/KakaoTalk_Photo_2019-12-14-16-13-36.png);
+  }
+}
+
 // 공통으로 사용될일 없음
 .about {
   width: 100%;
+
+  .style1_title {
+    line-height: 1.2em;
+    background: rgba(255,255,255,.6);
+    max-width: 260px;
+    padding: .5rem;
+    @include respond-to('sm') {
+      background: inherit;
+      max-width: none;
+      padding: 0;
+    }
+  }
+  .style3_title {
+    color: #444444;
+  }
 }
 
 .about .et_pb_code_inner {
@@ -188,7 +213,11 @@ body.et_vertical_nav #et-main-area {
     justify-content: flex-end;
     align-items: flex-end;
     display: flex;
+    flex-direction: column;
 
+    p {
+      color: #fff;
+    }
     .et_pb_text {
       max-width: 520px;
       padding-bottom: 60px;
@@ -276,6 +305,7 @@ $footer_height : 188px !important;
 #Contact {
   height: $footer_height;
   padding-top: 40px;
+  padding-bottom: 40px;
 
   .et_pb_row {
     width: 100%;

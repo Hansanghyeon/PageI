@@ -52,6 +52,9 @@ body.page-id-473 {
 .template.moduleGoggle {
   color: #8d9299;
 
+  .container {
+    width: 100%;
+  }
   // Atoms
   $headingColor : #454b56;
   .heading1 {font-size: 48px;}
@@ -61,6 +64,7 @@ body.page-id-473 {
   }
   div[class*='heading'] {
     color: $headingColor;
+    line-height: 1.2em;
   }
   // mo
   .projectInfo {
@@ -81,13 +85,24 @@ body.page-id-473 {
     .describe {
       font-size: 24px;
       letter-spacing: .05em;
+      line-height: 1.2em;
       position: relative;
-      display: inline-block;
+      display: flex;
+      flex-wrap: wrap;
+
+      @include respond-to('md') {
+        display: inline-block;
+      }
       .type {
-        position: absolute;
-        right: 0;
-        bottom: calc(100% + 1.5rem);
         font-size: 14px;
+        order: -1;
+        margin-bottom: 1.5rem;
+        @include respond-to('md') {
+          position: absolute;
+          right: 0;
+          bottom: calc(100% + 1.5rem);
+          margin-bottom: 0;
+        }
       }
     }
   }
@@ -108,7 +123,7 @@ body.page-id-473 {
       font-size: 1.2em;
       color: $headingColor;
       &.main {
-        font-size: 1.7em;
+        font-size: 1.3em;
         @include respond-to('md') {
           font-size: 1.5em;
         }
