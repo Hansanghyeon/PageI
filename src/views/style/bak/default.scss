@@ -109,6 +109,12 @@ b {
   background: linear-gradient($list);
 }
 
+.style3 {
+  // cube divier bg style
+  $oneBg: #E2865D;
+  background: $oneBg;
+}
+
 // scroll down button
 .scroll-down {
   width: 32px;

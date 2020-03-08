@@ -1,0 +1,195 @@
+@import '../../Scss/mix/utiles.scss';
+
+body {
+  background: #38404C;
+}
+.template.moduleGoggle {
+  background: #e3e6e9;
+  .pointTextColor{color: $cc1}
+  .divider {
+    width: 15px;
+    height: 1px;
+    border-radius: 999px;
+    margin: 0;
+  }
+  .divider-00 {
+    background-color: #8d9299;
+  }
+  img {width: 100%;}
+}
+
+.template.moduleGoggle {
+  color: #8d9299;
+
+  // Atoms
+  $headingColor : #454b56;
+  .heading1 {font-size: 48px;}
+  .heading2 {
+    font-size: 30px;
+    letter-spacing: .2em;
+  }
+  div[class*='heading'] {
+    color: $headingColor;
+  }
+  // mo
+  .projectInfo {
+    color: $headingColor;
+    
+    // Atom
+    .title {
+      letter-spacing: .1em;
+      line-height: 1;
+    }
+    // Atom
+    .type {
+      font-weight: 100;
+      letter-spacing: .05em;
+      color: #8d9299;
+    }
+    // Atom
+    .describe {
+      font-size: 24px;
+      letter-spacing: .05em;
+      position: relative;
+      display: inline-block;
+      .type {
+        position: absolute;
+        right: 0;
+        bottom: calc(100% + 1.5rem);
+        font-size: 14px;
+      }
+    }
+  }
+
+  // mol content
+  .projectContent {
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 1.7em;
+
+    span {
+      display: inline;
+      @include respond-to('md') {
+        display: block;
+      }
+    }
+    .title {
+      font-size: 1.2em;
+      color: $headingColor;
+      &.main {
+        font-size: 1.7em;
+        @include respond-to('md') {
+          font-size: 1.5em;
+        }
+      }
+      span {
+        display: inline;
+      }
+    }
+    .smail {
+      font-size: .9em;
+    }
+  }
+
+  // orga
+  .concept {
+    $bg: #363a45;
+    $color: #7e8c99;
+    
+    color: $color;
+    > .bg {
+      background-color: $bg;
+    }
+    .heading2 {
+      color: #c1cbe5;
+    }
+    .title {
+      color: $color;
+    }
+  }
+
+  .border-md-right {
+    border-right: none;
+    @include respond-to ('md') {
+      border-right: 1px solid #dee2e6;
+    }
+  }
+
+  .conclusion {
+    $bg: #38404C;
+    $color: #7e8c99;
+    &.bg {
+      background-color: $bg;
+      color: $color;
+    }
+    .heading2 {
+      color: #c1cbe5;
+    }
+    .staticBox {
+      width: auto;
+      word-break: keep-all;
+      @include respond-to('md') {
+        max-width: 450px;
+      }
+    }
+    .round {
+      background: $cc1;
+      color: $bg;
+      border-radius: 999px;
+      display: flex;
+      align-items: center;
+      justify-content: center;;
+      width: 17px;
+      height: 17px;
+      text-transform: uppercase;
+    }
+    img {
+      width: 80%;
+      margin: 75px 0;
+    }
+
+    //modularDetilItem
+    .modularDetilItem {
+      border-bottom: 1px solid rgba(192, 202, 228, .3);
+      padding: 100px 0;
+      &:last-child {
+        border-bottom: none;
+      }
+      img {
+        margin: 0;
+        width: 100%;
+      }
+    }
+    .description {
+      font-size: 15px;
+      letter-spacing: .05em;
+      word-break: keep-all;
+      .number {
+        font-size: .9em;
+        margin-bottom: 1rem;
+        text-transform: uppercase;
+      }
+      .title {
+        font-size: 1.8em;
+        text-transform: uppercase;
+      }
+    }
+    .bltear {
+      @include respond-to('lg') {
+        letter-spacing: .8em;
+      }
+    }
+    .footer {
+      margin-top: 200px;
+      margin-bottom: 100px;
+      color: #454B56;
+      .title {
+        font-size: 48px;
+      }
+      .thankyou {
+        margin-top: 200px;
+        color: #8C9198;
+      }
+    }
+  }
+}
