@@ -1,4 +1,7 @@
 {
+  "file": [
+    "@src/models/declaration.d.ts"
+  ],
   "extends": "./tsconfig.paths.json",
   "compilerOptions": {
     "target": "es5",
