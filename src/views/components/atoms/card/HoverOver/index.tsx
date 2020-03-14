@@ -1,8 +1,17 @@
 import React, { useRef, useState, useEffect } from 'react';
 import styled from 'styled-components';
+import { respondTo } from '@style/_respondTo';
 
 const CardRoot = styled.div`
   display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  margin-bottom: 24px;
+  ${respondTo.sm`
+    width: auto;
+    margin-bottom: 0;
+  `};
 `;
 
 const CardInfo = styled.div`
@@ -81,9 +90,10 @@ const CardBg = styled.div<imgSrc>`
 
 const Card = styled.div`
   position: relative;
-  flex: 0 0 480px;
-  width: 480px;
-  height: 320px;
+  width: 100%;
+  height: 100%;
+  max-width: 480px;
+  max-height: 320px;
   background-color: transparent;
   border-radius: 10px;
   box-shadow: rgba(0, 0, 0, 0.66) 0 30px 60px 0, inset #333 0 0 0 5px,
@@ -99,11 +109,19 @@ const Card = styled.div`
 `;
 
 const CardWrap = styled.div`
+  --hoverEasing: cubic-bezier(0.23, 1, 0.32, 1);
+  width: 90%;
+  height: 180px;
+  flex: none;
   margin: 10px;
   transform: perspective(800px);
   transform-style: preserve-3d;
   cursor: pointer;
-  --hoverEasing: cubic-bezier(0.23, 1, 0.32, 1);
+  ${respondTo.sm`
+    flex: 0 0 480;
+    width: 480px;
+    height: 320px;
+  `};
   &:hover {
     ${CardInfo} {
       transform: translateY(0);
