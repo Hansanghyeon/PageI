@@ -12,9 +12,9 @@
   01.00 - Section Nav
 ---------------------------------------------------*/
 @mixin pagei-sideNav-style1($li_bg, $active_li_bg, $tooltip_color) {
-  $li_bg : #{$li_bg};
-  $active_li_bg : #{$active_li_bg};
-  $tooltip_color : #{$tooltip_color};
+  $li_bg: #{$li_bg};
+  $active_li_bg: #{$active_li_bg};
+  $tooltip_color: #{$tooltip_color};
 
   #fp-nav.fp-pagei-sideNav-style1 {
     right: 20px;
@@ -53,7 +53,7 @@
         color: $tooltip_color;
       }
 
-      a.active+.fp-tooltip {
+      a.active + .fp-tooltip {
         opacity: 1;
         width: auto;
       }
@@ -91,3 +91,4 @@
     }
   }
 }
+@include pagei-sideNav-style1-left('#333', '#000', '#000');
