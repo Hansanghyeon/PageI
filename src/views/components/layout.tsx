@@ -8,7 +8,6 @@ import Header from './header';
 // Style
 import Grid from '@style/Grid';
 import DefaultTheme from '@style/themes';
-import '@style/layout.scss';
 
 interface Props {
   children?: any;
