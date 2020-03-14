@@ -10,13 +10,25 @@ const CardInfo = styled.div`
   position: absolute;
   bottom: 0;
   color: #fff;
-  transform: translateY(40%);
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  transform: translateY(calc(100% - 87px));
   transition: 0.6s 1.6s cubic-bezier(0.215, 0.61, 0.355, 1);
   text-align: left;
+
+  .header {
+    font-family: 'Playfair Display', serif;
+  }
   p {
     opacity: 0;
     text-shadow: rgba(black, 1) 0 2px 3px;
     transition: 0.6s 1.6s cubic-bezier(0.215, 0.61, 0.355, 1);
+    margin-top: 10px;
+    margin-bottom: 0.3em;
+    text-align: right;
   }
 
   * {
@@ -31,10 +43,11 @@ const CardInfo = styled.div`
     left: 0;
     z-index: 0;
     width: 100%;
+    height: 100%;
     background-image: linear-gradient(
       to bottom,
       transparent 0%,
-      rgba(#000, 0.6) 100%
+      rgba(0, 0, 0, 0.6) 100%
     );
     background-blend-mode: overlay;
     opacity: 0;
@@ -45,7 +58,7 @@ const CardInfo = styled.div`
   h1 {
     font-size: 36px;
     font-weight: 700;
-    text-shadow: rgba(black, 0.5) 0 10px 10p;
+    text-shadow: rgba(0, 0, 0, 0.5) 0 10px 10px;
   }
 `;
 const CardBg = styled.div<imgSrc>`
@@ -68,14 +81,17 @@ const CardBg = styled.div<imgSrc>`
 
 const Card = styled.div`
   position: relative;
-  flex: 0 0 240px;
-  width: 240px;
+  flex: 0 0 480px;
+  width: 480px;
   height: 320px;
-  background-color: #333;
+  background-color: transparent;
   border-radius: 10px;
   box-shadow: rgba(0, 0, 0, 0.66) 0 30px 60px 0, inset #333 0 0 0 5px,
     inset rgba(255, 255, 255, 0.5) 0 0 0 6px;
   overflow: hidden;
+  &:hover {
+    background-color: #fff;
+  }
   &.reset {
     transform: rotateY(0deg) rotateX(0deg) !important;
     transition: all 1s cubic-bezier(0.445, 0.05, 0.55, 0.95);
@@ -103,6 +119,7 @@ const CardWrap = styled.div`
       }
     }
     ${CardBg} {
+      opacity: 0.8;
       transition: 0.6s var(--hoverEasing), opacity 5s var(--hoverEasing);
       box-shadow: rgba(white, 0.2) 0 0 40px 5px, rgba(white, 1) 0 0 0 1px,
         rgba(black, 0.66) 0 30px 60px 0, inset #333 0 0 0 5px,
@@ -180,20 +197,22 @@ const HoverOverCard = ({ imgSrc, title, content }: Props) => {
     setHeight(CardEl.offsetHeight);
   }, [width, height, mouseX, mouseY, mouseLeaveDelay]);
   return (
-    <CardWrap
-      ref={CardRef}
-      onMouseMove={e => handleMouseMove(e)}
-      onMouseEnter={() => handleMouseEnter()}
-      onMouseLeave={() => handleMouseLeave()}
-    >
-      <Card style={cardStyle()} className={cardStyleReset ? 'reset' : ''}>
-        <CardBg imgSrc={imgSrc} style={cardBgTransform()} />
-        <CardInfo>
-          <h1 className="header">{title}</h1>
-          <p>{content}</p>
-        </CardInfo>
-      </Card>
-    </CardWrap>
+    <CardRoot>
+      <CardWrap
+        ref={CardRef}
+        onMouseMove={e => handleMouseMove(e)}
+        onMouseEnter={() => handleMouseEnter()}
+        onMouseLeave={() => handleMouseLeave()}
+      >
+        <Card style={cardStyle()} className={cardStyleReset ? 'reset' : ''}>
+          <CardBg imgSrc={imgSrc} style={cardBgTransform()} />
+          <CardInfo>
+            <h1 className="header">{title}</h1>
+            <p>{content}</p>
+          </CardInfo>
+        </Card>
+      </CardWrap>
+    </CardRoot>
   );
 };
 
