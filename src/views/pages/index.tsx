@@ -1,10 +1,11 @@
 import React from 'react';
-import { Link } from 'gatsby';
 import ReactFullpage from '@fullpage/react-fullpage';
+import 'fullpage.js/vendors/scrolloverflow';
 
-import Layout from '../components/layout';
-import Image from '../components/image';
-import SEO from '../components/seo';
+import SEO from '@view/components/seo';
+import GallerySection from '@template/GallerySection';
+import BioSection from '@template/BioSection';
+import '@view/backup/Scss/fullpage.scss';
 
 const IndexPage = () => (
   <>
@@ -12,18 +13,22 @@ const IndexPage = () => (
     <ReactFullpage
       licenseKey={process.env.REACT_APP_FULLPAGE_LICENSE_KEY}
       scrollingSpeed={1000}
+      navigation
+      navigationPosition="pagei-sideNav-style1"
+      navigationTooltips={[
+        'Output',
+        'About me',
+        'Philosophy',
+        'Contact',
+        'Instagram',
+      ]}
+      dragAndMove
+      scrollOverflow
       render={({ state, fullpageApi }: any) => {
         return (
           <ReactFullpage.Wrapper>
-            <div className="section">
-              <p>Section 1 (welcome to fullpage.js)</p>
-              <button onClick={() => fullpageApi.moveSectionDown()}>
-                Click me to move down
-              </button>
-            </div>
-            <div className="section">
-              <p>Section 2</p>
-            </div>
+            <GallerySection />
+            <BioSection />
           </ReactFullpage.Wrapper>
         );
       }}
