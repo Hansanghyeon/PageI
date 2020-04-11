@@ -50,5 +50,13 @@ module.exports = {
         },
       },
     },
+    {
+      resolve: `gatsby-plugin-transition-link`,
+      options: {
+        layout: require.resolve(
+          `${__dirname}/src/views/components/layouts/Main/index.tsx`,
+        ),
+      },
+    },
   ],
 };
