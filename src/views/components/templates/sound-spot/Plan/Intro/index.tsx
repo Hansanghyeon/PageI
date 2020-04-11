@@ -6,14 +6,15 @@ import PageInfo from '@molecule/PageInfo';
 import { rhythm } from '@style/typography';
 import PageDivider from '@atom/divider/Page';
 import ImageWrap from '@atom/wrap/Image';
-import SectionWrap from '@atom/wrap/Section';
+import SectionWrap from '@atom/wrap/project/Section';
+import SectionTitleRow from '@atom/wrap/project/SectionTitleRow';
 
-const PageInfoRow = styled(Row)``;
 const WrapRoot = styled(SectionWrap)`
   font-size: 18px;
-  ${PageInfoRow} {
-    margin-bottom: ${rhythm(4)};
-  }
+`;
+
+const BodyRow = styled(Row)`
+  margin-bottom: ${rhythm(4)};
 `;
 
 const PlanIntroSection = () => (
@@ -22,13 +23,13 @@ const PlanIntroSection = () => (
       <img src="https://wp.kihyeon.page/wp-content/uploads/project/sound-spot/프론트-뷰_최종본-min.png" />
     </ImageWrap>
     <WrapRoot>
-      <PageInfoRow>
+      <SectionTitleRow>
         <Col col>
           <PageInfo />
         </Col>
-      </PageInfoRow>
-      <Row>
-        <Col col>
+      </SectionTitleRow>
+      <BodyRow>
+        <Col col={9}>
           <p>
             With various kind of visual contents, TV has been essential domestic
             appliances in our home. But, At the same time, There are some
@@ -44,9 +45,9 @@ const PlanIntroSection = () => (
             효율적으로 해결하고자 진행되었습니다.
           </p>
         </Col>
-      </Row>
+      </BodyRow>
       <Row>
-        <Col col>
+        <Col col={9}>
           <p>Designed by Kihyeon Kim / Seungmin Kwon / Hyomin Lee</p>
         </Col>
       </Row>
