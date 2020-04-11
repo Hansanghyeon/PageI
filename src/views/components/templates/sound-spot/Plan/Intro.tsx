@@ -6,25 +6,10 @@ import PageInfo from '@molecule/PageInfo';
 import { rhythm } from '@style/typography';
 import PageDivider from '@atom/divider/Page';
 import ImageWrap from '@atom/wrap/Image';
+import SectionWrap from '@atom/wrap/Section';
 
 const PageInfoRow = styled(Row)``;
-const WrapRoot = styled(Container)`
-  /* section base style */
-  font-size: 18px;
-  color: ${({ theme }) => theme.color.styleguid['$blue-grey-two']};
-  padding-top: ${rhythm(5.5)};
-  padding-bottom: ${rhythm(5.5)};
-  ${Row} {
-    margin-bottom: ${rhythm(5)};
-    &:last-child {
-      margin-bottom: 0;
-    }
-  }
-  ${Col} {
-    p:last-child {
-      margin-bottom: 0;
-    }
-  }
+const WrapRoot = styled(SectionWrap)`
   ${PageInfoRow} {
     margin-bottom: ${rhythm(4)};
   }
