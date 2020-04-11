@@ -1,19 +1,11 @@
 import React from 'react';
 import { Row, Col } from 'styled-bootstrap-grid';
-import styled from 'styled-components';
-// Utils
-import { rhythm } from '@style/typography';
 // Components
 import ImageWrap from '@atom/wrap/Image';
 import SectionWrap from '@atom/wrap/Section';
 import SectiontTitleText from '@atom/text/title/Section';
 import PageDivider from '@atom/divider/Page';
-
-const ColTitle = styled.div`
-  color: ${({ theme }) => theme.color.styleguid['$denim']};
-  font-weight: bold;
-  margin-bottom: ${rhythm(1 / 3)};
-`;
+import ColTitle from '@atom/text/title/Col';
 
 const ProblemSection = () => (
   <>
