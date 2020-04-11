@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import { Container, Row, Col } from 'styled-bootstrap-grid';
+import { Row, Col } from 'styled-bootstrap-grid';
 // Components
 import PageInfo from '@molecule/PageInfo';
 import { rhythm } from '@style/typography';
@@ -10,6 +10,7 @@ import SectionWrap from '@atom/wrap/Section';
 
 const PageInfoRow = styled(Row)``;
 const WrapRoot = styled(SectionWrap)`
+  font-size: 18px;
   ${PageInfoRow} {
     margin-bottom: ${rhythm(4)};
   }
@@ -18,7 +19,7 @@ const WrapRoot = styled(SectionWrap)`
 const PlanIntroSection = () => (
   <>
     <ImageWrap>
-      <img src="https://source.unsplash.com/collection/9641990/1600x900" />
+      <img src="https://wp.kihyeon.page/wp-content/uploads/project/sound-spot/프론트-뷰_최종본-min.png" />
     </ImageWrap>
     <WrapRoot>
       <PageInfoRow>
