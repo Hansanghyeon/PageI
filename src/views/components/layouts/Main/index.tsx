@@ -5,7 +5,7 @@ import { GridThemeProvider } from 'styled-bootstrap-grid';
 // Style
 import Grid from '@style/Grid';
 import DefaultTheme from '@style/themes';
-import '@style/layout.scss';
+import '@style/_base.scss';
 
 interface Props {
   children?: any;
