@@ -4,7 +4,7 @@ import { rhythm } from '@style/typography';
 
 const SectionWrap = styled(Container)`
   /* section base style */
-  font-size: 18px;
+  font-size: 14px;
   color: ${({ theme }) => theme.color.styleguid['$blue-grey-two']};
   padding-top: ${rhythm(5.5)};
   padding-bottom: ${rhythm(5.5)};
