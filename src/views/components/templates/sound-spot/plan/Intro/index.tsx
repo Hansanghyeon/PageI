@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import { Row, Col } from 'styled-bootstrap-grid';
+import { Container, Row, Col } from 'styled-bootstrap-grid';
 // Components
 import PageInfo from '@molecule/PageInfo';
 import { rhythm } from '@style/typography';
@@ -20,7 +20,9 @@ const BodyRow = styled(Row)`
 const PlanIntroSection = () => (
   <>
     <ImageWrap>
-      <img src="https://wp.kihyeon.page/wp-content/uploads/project/sound-spot/프론트-뷰_최종본-min.png" />
+      <Container>
+        <img src="https://wp.kihyeon.page/wp-content/uploads/project/sound-spot/프론트-뷰_최종본-min.png" />
+      </Container>
     </ImageWrap>
     <WrapRoot>
       <SectionTitleRow>

@@ -1,5 +1,5 @@
 import React from 'react';
-import { Row, Col } from 'styled-bootstrap-grid';
+import { Container, Row, Col } from 'styled-bootstrap-grid';
 // Components
 import ImageWrap from '@atom/wrap/Image';
 import SectionWrap from '@atom/wrap/project/Section';
@@ -9,9 +9,11 @@ import SectionTitleRow from '@atom/wrap/project/SectionTitleRow';
 
 const ProblemSection = () => (
   <>
-    <ImageWrap>
-      <img src="https://wp.kihyeon.page/wp-content/uploads/project/sound-spot/연출이미지-1-min.png" />
-    </ImageWrap>
+    <Container>
+      <ImageWrap>
+        <img src="https://wp.kihyeon.page/wp-content/uploads/project/sound-spot/연출이미지-1-min.png" />
+      </ImageWrap>
+    </Container>
     <SectionWrap>
       <SectionTitleRow>
         <Col col>
