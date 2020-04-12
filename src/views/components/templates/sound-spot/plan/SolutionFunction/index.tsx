@@ -7,11 +7,7 @@ import ImageWrap from '@atom/wrap/Image';
 import SectionWrap from '@atom/wrap/project/Section';
 import SectiontTitleText from '@atom/text/title/Section';
 import SectionTitleRow from '@atom/wrap/project/SectionTitleRow';
-
-const SloganTitle = styled(SectiontTitleText)`
-  font-size: 1.2rem;
-  color: ${({ theme }) => theme.color.styleguid['$slate']};
-`;
+import SloganTitle from '@atom/text/title/Slogan';
 
 const SolutionFunctionSection = () => {
   return (

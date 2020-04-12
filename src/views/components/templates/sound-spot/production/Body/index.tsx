@@ -6,6 +6,7 @@ import { rhythm } from '@style/typography';
 import SectionWrap from '@atom/wrap/project/Section';
 import SectiontTitleText from '@atom/text/title/Section';
 import SectionTitleRow from '@atom/wrap/project/SectionTitleRow';
+import SloganTitle from '@atom/text/title/Slogan';
 
 const StyledSectionWrap = styled(SectionWrap)`
   position: absolute;
@@ -14,11 +15,6 @@ const StyledSectionWrap = styled(SectionWrap)`
 `;
 const Size = styled.img`
   visibility: hidden;
-`;
-const SloganTitle = styled(SectiontTitleText)`
-  font-size: 1.2rem;
-  color: ${({ theme }) => theme.color.styleguid['$slate']};
-  margin-bottom: ${rhythm(1)};
 `;
 const StyledWrap = styled(Container)`
   position: relative;
