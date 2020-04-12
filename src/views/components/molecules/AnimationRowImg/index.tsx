@@ -56,4 +56,30 @@ const AnimationRowImg = ({ imgSrc }: AnimationRowImgTpye) => {
   );
 };
 
+interface AnimationRowImgTpye2 {
+  imgSrc: Array<string>;
+}
+export const AnimationRowImg2 = ({ imgSrc }: AnimationRowImgTpye2) => {
+  const Img1 = useRef<HTMLImageElement>(null);
+  const Img2 = useRef<HTMLImageElement>(null);
+  useEffect(() => {
+    imgObserver.observe(Img1.current);
+    imgObserver.observe(Img2.current);
+  });
+  return (
+    <ImageWrap>
+      <Container fluid>
+        <Row>
+          <Col col noGutter>
+            <img src={imgSrc[0]} alt="" ref={Img1} />
+          </Col>
+          <Col col noGutter>
+            <img src={imgSrc[1]} alt="" ref={Img2} />
+          </Col>
+        </Row>
+      </Container>
+    </ImageWrap>
+  );
+};
+
 export default AnimationRowImg;
