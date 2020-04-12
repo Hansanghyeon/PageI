@@ -7,6 +7,8 @@ import MotiveSection from '@template/sound-spot/plan/Motive';
 import SolutionFunctionSection from '@template/sound-spot/plan/SolutionFunction';
 import SoundspotBody from '@template/sound-spot/production/Body';
 import SoundspotBodyShot from '@template/sound-spot/production/Body/Shot';
+import SoundspotRemoteController from '@template/sound-spot/production/RemoteController';
+import SoundspotRemoteControllerShot from '@template/sound-spot/production/RemoteController/Shot';
 // Design System
 
 const SoundSpot = () => (
@@ -18,6 +20,8 @@ const SoundSpot = () => (
     <SolutionFunctionSection />
     <SoundspotBody />
     <SoundspotBodyShot />
+    <SoundspotRemoteController />
+    <SoundspotRemoteControllerShot />
   </>
 );
 
