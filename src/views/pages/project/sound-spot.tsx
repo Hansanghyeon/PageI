@@ -6,6 +6,7 @@ import InsightSection from '@template/sound-spot/plan/Insight';
 import MotiveSection from '@template/sound-spot/plan/Motive';
 import SolutionFunctionSection from '@template/sound-spot/plan/SolutionFunction';
 import SolutionspotBody from '@template/sound-spot/production/Body';
+import SolutionspotShot from '@template/sound-spot/production/Body/Shot';
 // Design System
 
 const soundSpot = () => (
@@ -16,6 +17,7 @@ const soundSpot = () => (
     <MotiveSection />
     <SolutionFunctionSection />
     <SolutionspotBody />
+    <SolutionspotShot />
   </>
 );
 

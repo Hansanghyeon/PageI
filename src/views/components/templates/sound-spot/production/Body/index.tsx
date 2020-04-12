@@ -3,7 +3,6 @@ import styled from 'styled-components';
 import { Container, Row, Col } from 'styled-bootstrap-grid';
 // Components
 import { rhythm } from '@style/typography';
-import ImageWrap from '@atom/wrap/Image';
 import SectionWrap from '@atom/wrap/project/Section';
 import SectiontTitleText from '@atom/text/title/Section';
 import SectionTitleRow from '@atom/wrap/project/SectionTitleRow';
@@ -23,9 +22,6 @@ const SloganTitle = styled(SectiontTitleText)`
 `;
 const StyledWrap = styled(Container)`
   position: relative;
-  img {
-    transform: scale(1.2);
-  }
 `;
 
 const SoundspotBody = () => {
@@ -56,6 +52,35 @@ const SoundspotBody = () => {
           </Row>
         </StyledSectionWrap>
       </StyledWrap>
+      <SectionWrap>
+        <SectionTitleRow>
+          <Col col>
+            <SectiontTitleText>[1] Speaker body</SectiontTitleText>
+          </Col>
+        </SectionTitleRow>
+        <Row>
+          <Col col>
+            <SloganTitle>‘ Basic and stable design ’</SloganTitle>
+          </Col>
+        </Row>
+        <Row>
+          <Col col={8}>
+            <p>
+              안정적인 스탠드 구조를 위한 파이프라인과 가볍고 심플한 디자인을
+              지향하여, 실내 어느 거실 인테리어에도 부담없이 배치 할 수
+              있습니다.
+            </p>
+          </Col>
+        </Row>
+        <Row>
+          <Col col={8}>
+            <p>
+              Through pipe line for stable stand structure and light and simple
+              design, User can position it to everywhere in livingroom.
+            </p>
+          </Col>
+        </Row>
+      </SectionWrap>
     </>
   );
 };
