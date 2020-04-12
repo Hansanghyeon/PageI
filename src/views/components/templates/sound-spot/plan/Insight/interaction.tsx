@@ -41,7 +41,7 @@ const Svg = styled.svg`
 
 const LoopPolyLine = keyframes`
   to {
-    stroke-dashoffset: -12;
+    stroke-dashoffset: -1200;
   }
 `;
 
@@ -52,7 +52,7 @@ const AnimationPolyLine = styled.polyline`
   stroke-linecap: round;
   stroke-linejoin: round;
   stroke-dasharray: 6;
-  animation: ${LoopPolyLine} 1s infinite;
+  animation: ${LoopPolyLine} 60s infinite;
 `;
 
 const Interaction = () => (
