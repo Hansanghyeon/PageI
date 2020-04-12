@@ -5,7 +5,7 @@ import styled from 'styled-components';
 import { rhythm } from '@style/typography';
 
 const SectionTitleRow = styled(Row)`
-  margin-bottom: ${rhythm(4)};
+  margin-bottom: ${rhythm(2)};
 `;
 
 export default SectionTitleRow;
