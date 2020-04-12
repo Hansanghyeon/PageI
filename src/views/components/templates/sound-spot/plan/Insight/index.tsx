@@ -32,7 +32,7 @@ const InsightSection = () => {
           </Col>
         </SectionTitleRow>
         <Row>
-          <Col col={9}>
+          <Col col={12} lg={9}>
             <ColTitle>' 소리의 이동경로 변경과 도달범위 제한 '</ColTitle>
             <p>
               소리의 이동경로 및 도달범위를 제한하여, TV 앞으로 다가가는
@@ -44,7 +44,7 @@ const InsightSection = () => {
         <br />
         <br />
         <Row>
-          <Col col={9}>
+          <Col col={12} lg={9}>
             <ColTitle>
               ' Change a moving route of TV sound and limit area of reach. '
             </ColTitle>

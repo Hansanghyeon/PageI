@@ -60,7 +60,7 @@ const SoundspotBody = () => {
           </Col>
         </Row>
         <Row>
-          <Col col={8}>
+          <Col col={12} lg={9}>
             <p>
               안정적인 스탠드 구조를 위한 파이프라인과 가볍고 심플한 디자인을
               지향하여, 실내 어느 거실 인테리어에도 부담없이 배치 할 수
@@ -69,7 +69,7 @@ const SoundspotBody = () => {
           </Col>
         </Row>
         <Row>
-          <Col col={8}>
+          <Col col={12} lg={9}>
             <p>
               Through pipe line for stable stand structure and light and simple
               design, User can position it to everywhere in livingroom.

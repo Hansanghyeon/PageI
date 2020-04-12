@@ -21,7 +21,7 @@ const ProblemSection = () => (
         </Col>
       </SectionTitleRow>
       <Row>
-        <Col col={9}>
+        <Col col={12} lg={9}>
           <ColTitle>
             ' 아이들의 나쁜 TV시청 습관과 TV 소음으로 인한 벽/층간 소음 '
           </ColTitle>
@@ -34,7 +34,7 @@ const ProblemSection = () => (
       <br />
       <br />
       <Row>
-        <Col col={9}>
+        <Col col={12} lg={9}>
           <ColTitle>
             ' Children's bad viewing habits and TV noise from in and out of the
             house. '
