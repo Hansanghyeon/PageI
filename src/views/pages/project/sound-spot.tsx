@@ -5,20 +5,20 @@ import ProblemSection from '@template/sound-spot/plan/Problem';
 import InsightSection from '@template/sound-spot/plan/Insight';
 import MotiveSection from '@template/sound-spot/plan/Motive';
 import SolutionFunctionSection from '@template/sound-spot/plan/SolutionFunction';
-import SolutionspotBody from '@template/sound-spot/production/Body';
-import SolutionspotShot from '@template/sound-spot/production/Body/Shot';
+import SoundspotBody from '@template/sound-spot/production/Body';
+import SoundspotBodyShot from '@template/sound-spot/production/Body/Shot';
 // Design System
 
-const soundSpot = () => (
+const SoundSpot = () => (
   <>
     <PlanIntroSection />
     <ProblemSection />
     <InsightSection />
     <MotiveSection />
     <SolutionFunctionSection />
-    <SolutionspotBody />
-    <SolutionspotShot />
+    <SoundspotBody />
+    <SoundspotBodyShot />
   </>
 );
 
-export default soundSpot;
+export default SoundSpot;

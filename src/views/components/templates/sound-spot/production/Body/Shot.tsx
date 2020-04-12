@@ -1,8 +1,8 @@
-import React, { useEffect, useRef } from 'react';
+import React from 'react';
 // Components
 import AnimationRowImg from '@molecule/AnimationRowImg';
 
-const SoundspotShot = () => {
+const SoundspotBodyShot = () => {
   return (
     <>
       <AnimationRowImg imgSrc="https://wp.kihyeon.page/wp-content/uploads/project/sound-spot/프론트-렌더.3-min.png" />
@@ -15,4 +15,4 @@ const SoundspotShot = () => {
   );
 };
 
-export default SoundspotShot;
+export default SoundspotBodyShot;
