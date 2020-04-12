@@ -13,6 +13,7 @@ import SoundspotHolder from '@template/sound-spot/production/Holder';
 import SoundspotHolderShot from '@template/sound-spot/production/Holder/Shot';
 import SoundspotRubberCap from '@template/sound-spot/production/RubberCap';
 import SoundspotRubberCapShot from '@template/sound-spot/production/RubberCap/Shot';
+import SoundspotConclusion from '@template/sound-spot/Conclusion';
 // Design System
 
 const SoundSpot = () => (
@@ -30,6 +31,7 @@ const SoundSpot = () => (
     <SoundspotHolderShot />
     <SoundspotRubberCap />
     <SoundspotRubberCapShot />
+    <SoundspotConclusion />
   </>
 );
 
