@@ -1,10 +1,10 @@
 import React from 'react';
 // Components
-import PlanIntroSection from '@template/sound-spot/Intro';
-import ProblemSection from '@template/sound-spot/Problem';
-import InsightSection from '@template/sound-spot/Insight';
-import MotiveSection from '@template/sound-spot/Motive';
-import SolutionFunctionSection from '@template/sound-spot/SolutionFunction';
+import PlanIntroSection from '@template/sound-spot/plan/Intro';
+import ProblemSection from '@template/sound-spot/plan/Problem';
+import InsightSection from '@template/sound-spot/plan/Insight';
+import MotiveSection from '@template/sound-spot/plan/Motive';
+import SolutionFunctionSection from '@template/sound-spot/plan/SolutionFunction';
 // Design System
 
 const soundSpot = () => (
