@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
-
+// Components
+import Link from '@atom/Link';
 import HoverOverCard from '@atom/card/HoverOver';
 import { respondTo } from '@style/_respondTo';
 
@@ -26,16 +27,20 @@ const InnerSection = styled.div`
 const GallerySection = () => (
   <Section className="section">
     <InnerSection>
-      <HoverOverCard
-        imgSrc="https://wp.kihyeon.page/wp-content/uploads/Butterfleye6.jpg"
-        title="Butterfleye"
-        content="FASHION EYEWEAR"
-      />
-      <HoverOverCard
-        imgSrc="https://wp.kihyeon.page/wp-content/uploads/modulegoggle.jpg"
-        title="MODULAR"
-        content="SMART INDUSTRIAL SAFETY GOGGLE"
-      />
+      <Link direction="left" to="/404">
+        <HoverOverCard
+          imgSrc="https://wp.kihyeon.page/wp-content/uploads/Butterfleye6.jpg"
+          title="Butterfleye"
+          content="FASHION EYEWEAR"
+        />
+      </Link>
+      <Link direction="left" to="/404">
+        <HoverOverCard
+          imgSrc="https://wp.kihyeon.page/wp-content/uploads/modulegoggle.jpg"
+          title="MODULAR"
+          content="SMART INDUSTRIAL SAFETY GOGGLE"
+        />
+      </Link>
     </InnerSection>
   </Section>
 );

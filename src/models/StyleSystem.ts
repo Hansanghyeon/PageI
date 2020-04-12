@@ -8,6 +8,7 @@ interface Colors {
   primary: string;
   bg: string[];
   text: string[];
+  styleguid: any;
   grayscales: Grayscales;
 }
 
