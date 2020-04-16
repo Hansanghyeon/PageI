@@ -1,17 +1,24 @@
 import React from 'react';
 import styled from 'styled-components';
 import { Container, Row, Col } from 'styled-bootstrap-grid';
-// Components
+// Utils
+import { respondTo } from '@style/_respondTo';
 import { rhythm } from '@style/typography';
+// Components
 import SectionWrap from '@atom/wrap/project/Section';
 import SectiontTitleText from '@atom/text/title/Section';
 import SectionTitleRow from '@atom/wrap/project/SectionTitleRow';
 import SloganTitle from '@atom/text/title/Slogan';
+import ImageWrap from '@atom/wrap/Image';
 
 const StyledSectionWrap = styled(SectionWrap)`
-  position: absolute;
-  top: 0;
   color: ${({ theme }) => theme.color.styleguid['$slate']};
+  ${respondTo.lg`
+    position: absolute;
+    top: 0px;
+    left: 50%;
+    transform: translateX(-50%);
+  `};
 `;
 const Size = styled.img`
   visibility: hidden;
@@ -23,11 +30,13 @@ const StyledWrap = styled(Container)`
 const SoundspotBody = () => {
   return (
     <>
-      <StyledWrap>
-        <img
-          src="https://wp.kihyeon.page/wp-content/uploads/project/sound-spot/자산-15-min.png"
-          alt=""
-        />
+      <StyledWrap fluid style={{ padding: 0 }}>
+        <ImageWrap>
+          <img
+            src="https://wp.kihyeon.page/wp-content/uploads/project/sound-spot/초록의자_1920-min.png"
+            alt=""
+          />
+        </ImageWrap>
         <StyledSectionWrap>
           <SectionTitleRow>
             <Col col>
@@ -60,7 +69,7 @@ const SoundspotBody = () => {
           </Col>
         </Row>
         <Row>
-          <Col col={8}>
+          <Col col={12} lg={9}>
             <p>
               안정적인 스탠드 구조를 위한 파이프라인과 가볍고 심플한 디자인을
               지향하여, 실내 어느 거실 인테리어에도 부담없이 배치 할 수
@@ -69,7 +78,7 @@ const SoundspotBody = () => {
           </Col>
         </Row>
         <Row>
-          <Col col={8}>
+          <Col col={12} lg={9}>
             <p>
               Through pipe line for stable stand structure and light and simple
               design, User can position it to everywhere in livingroom.

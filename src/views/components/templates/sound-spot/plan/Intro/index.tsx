@@ -1,20 +1,28 @@
 import React from 'react';
 import styled from 'styled-components';
 import { Container, Row, Col } from 'styled-bootstrap-grid';
+// Utils
+import { respondTo } from '@style/_respondTo';
+import { rhythm } from '@style/typography';
 // Components
 import PageInfo from '@molecule/PageInfo';
-import { rhythm } from '@style/typography';
 import PageDivider from '@atom/divider/Page';
 import ImageWrap from '@atom/wrap/Image';
 import SectionWrap from '@atom/wrap/project/Section';
 import SectionTitleRow from '@atom/wrap/project/SectionTitleRow';
 
 const WrapRoot = styled(SectionWrap)`
-  font-size: 18px;
+  font-size: ${rhythm(1 / 3)};
+  ${respondTo.md`
+    font-size: ${rhythm(1 / 2)};
+  `};
 `;
 
 const BodyRow = styled(Row)`
-  margin-bottom: ${rhythm(4)};
+  margin-bottom: ${rhythm(2)};
+  ${respondTo.md`
+    margin-bottom: ${rhythm(4)};
+  `};
 `;
 
 const PlanIntroSection = () => (
@@ -31,7 +39,7 @@ const PlanIntroSection = () => (
         </Col>
       </SectionTitleRow>
       <BodyRow>
-        <Col col={9}>
+        <Col col={12} lg={9}>
           <p>
             With various kind of visual contents, TV has been essential domestic
             appliances in our home. But, At the same time, There are some
@@ -49,7 +57,7 @@ const PlanIntroSection = () => (
         </Col>
       </BodyRow>
       <Row>
-        <Col col={9}>
+        <Col col={12} lg={9}>
           <p>Designed by Kihyeon Kim / Seungmin Kwon / Hyomin Lee</p>
         </Col>
       </Row>

@@ -1,5 +1,8 @@
 import React, { useRef } from 'react';
 import styled from 'styled-components';
+// Utils
+import { respondTo } from '@style/_respondTo';
+import { rhythm } from '@style/typography';
 // components
 import PageTitleText from '@atom/text/title/Page';
 import PageDescriptionText from '@atom/text/description/Page';
@@ -9,23 +12,35 @@ const Wrap = styled.div`
   display: inline-block;
 `;
 const WrapInner = styled.div`
-  display: grid;
-  grid-template-columns: repeat(2, auto);
-  grid-template-rows: repeat(2, auto);
-  grid-column-gap: 8px;
-  grid-row-gap: 32px;
+  ${respondTo.md`
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    grid-template-rows: repeat(2, auto);
+    grid-column-gap: 8px;
+    grid-row-gap: 32px;
+  `}
 `;
 const TitleWrap = styled.div`
-  grid-area: 1 / 1 / 2 / 2;
-  align-self: end;
+  margin-bottom: ${rhythm(1 / 2)};
+  ${respondTo.md`
+    grid-area: 1 / 1 / 2 / 2;
+    align-self: end;
+    margin-bottom: 0;
+  `};
 `;
 const DescriptionWrap = styled.div`
-  grid-area: 2 / 1 / 3 / 3;
+  ${respondTo.md`
+    grid-area: 2 / 1 / 3 / 3;
+  `}
 `;
 const LabelWrap = styled.div`
-  grid-area: 1 / 2 / 2 / 3;
-  justify-self: end;
-  align-self: end;
+  margin-bottom: ${rhythm(1 / 2)};
+  ${respondTo.md`
+    grid-area: 1 / 2 / 2 / 3;
+    justify-self: end;
+    align-self: end;
+    margin-bottom:0;
+  `}
 `;
 
 const PageInfo = () => (

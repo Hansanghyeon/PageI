@@ -1,11 +1,19 @@
 import React from 'react';
 import ReactFullpage from '@fullpage/react-fullpage';
 import 'fullpage.js/vendors/scrolloverflow';
+import { createGlobalStyle } from 'styled-components';
 
 import SEO from '@view/components/seo';
 import GallerySection from '@template/GallerySection';
 import BioSection from '@template/BioSection';
 import '@view/backup/Scss/fullpage.scss';
+
+const UniquePageWrap = createGlobalStyle`
+  body[class*="fp-viewing"] .tl-wrapper {
+    height: 100vh;
+    overflow-y: hidden;
+  }
+`;
 
 const IndexPage = () => (
   <>
@@ -26,10 +34,13 @@ const IndexPage = () => (
       scrollOverflow
       render={({ state, fullpageApi }: any) => {
         return (
-          <ReactFullpage.Wrapper>
-            <GallerySection />
-            <BioSection />
-          </ReactFullpage.Wrapper>
+          <>
+            <UniquePageWrap />
+            <ReactFullpage.Wrapper>
+              <GallerySection />
+              <BioSection />
+            </ReactFullpage.Wrapper>
+          </>
         );
       }}
     />

@@ -4,6 +4,7 @@ import { Container, Row, Col } from 'styled-bootstrap-grid';
 import { TimelineLite, Power1 } from 'gsap';
 // Utils
 import { rhythm } from '@style/typography';
+import { respondTo } from '@style/_respondTo';
 
 const ImageWrap = styled.div`
   text-align: center;
@@ -15,7 +16,7 @@ const ImageWrap = styled.div`
     opacity: 0.2;
   }
   ${Row} {
-    margin-bottom: ${rhythm(4)};
+    margin-bottom: ${rhythm(2)};
   }
 `;
 
