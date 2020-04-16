@@ -1,17 +1,24 @@
 import React from 'react';
 import styled from 'styled-components';
 import { Container, Row, Col } from 'styled-bootstrap-grid';
-// Components
+// Utils
+import { respondTo } from '@style/_respondTo';
 import { rhythm } from '@style/typography';
+// Components
 import SectionWrap from '@atom/wrap/project/Section';
 import SectiontTitleText from '@atom/text/title/Section';
 import SectionTitleRow from '@atom/wrap/project/SectionTitleRow';
 import SloganTitle from '@atom/text/title/Slogan';
+import ImageWrap from '@atom/wrap/Image';
 
 const StyledSectionWrap = styled(SectionWrap)`
-  position: absolute;
-  top: 0;
   color: ${({ theme }) => theme.color.styleguid['$slate']};
+  ${respondTo.lg`
+    position: absolute;
+    top: 0px;
+    left: 50%;
+    transform: translateX(-50%);
+  `};
 `;
 const Size = styled.img`
   visibility: hidden;
@@ -23,11 +30,13 @@ const StyledWrap = styled(Container)`
 const SoundspotBody = () => {
   return (
     <>
-      <StyledWrap>
-        <img
-          src="https://wp.kihyeon.page/wp-content/uploads/project/sound-spot/자산-15-min.png"
-          alt=""
-        />
+      <StyledWrap fluid style={{ padding: 0 }}>
+        <ImageWrap>
+          <img
+            src="https://wp.kihyeon.page/wp-content/uploads/project/sound-spot/초록의자_1920-min.png"
+            alt=""
+          />
+        </ImageWrap>
         <StyledSectionWrap>
           <SectionTitleRow>
             <Col col>

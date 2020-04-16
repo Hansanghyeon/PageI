@@ -17,9 +17,6 @@ const ImageWrap = styled.div`
   }
   ${Row} {
     margin-bottom: ${rhythm(2)};
-    ${respondTo.lg`
-      margin-bottom: ${rhythm(4)};
-    `};
   }
 `;
 

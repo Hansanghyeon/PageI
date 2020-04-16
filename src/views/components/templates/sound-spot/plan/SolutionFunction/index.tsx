@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import { Container, Row, Col } from 'styled-bootstrap-grid';
+import { Row, Col } from 'styled-bootstrap-grid';
 // Components
 import { rhythm } from '@style/typography';
 import ImageWrap from '@atom/wrap/Image';
@@ -12,13 +12,13 @@ import SloganTitle from '@atom/text/title/Slogan';
 const SolutionFunctionSection = () => {
   return (
     <>
+      <ImageWrap style={{ marginTop: rhythm(4) }}>
+        <img
+          src="https://wp.kihyeon.page/wp-content/uploads/project/sound-spot/연출-이미지-3-min.png"
+          alt=""
+        />
+      </ImageWrap>
       <SectionWrap>
-        <ImageWrap style={{ marginBottom: rhythm(4) }}>
-          <img
-            src="https://wp.kihyeon.page/wp-content/uploads/project/sound-spot/연출-이미지-3-min.png"
-            alt=""
-          />
-        </ImageWrap>
         <SectionTitleRow>
           <Col col>
             <SectiontTitleText>[4] Solution & Function</SectiontTitleText>
@@ -47,6 +47,12 @@ const SolutionFunctionSection = () => {
           </Col>
         </Row>
       </SectionWrap>
+      <ImageWrap style={{ marginBottom: rhythm(4) }}>
+        <img
+          src="https://wp.kihyeon.page/wp-content/uploads/project/sound-spot/스케치-min.jpg"
+          alt=""
+        />
+      </ImageWrap>
     </>
   );
 };

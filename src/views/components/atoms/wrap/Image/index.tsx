@@ -6,6 +6,7 @@ const ImageWrap = styled.div`
   font-size: 0;
   line-height: 0;
   img {
+    width: 100%;
     margin-bottom: 0;
   }
 `;
