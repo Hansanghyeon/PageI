@@ -9,6 +9,13 @@ const Section = styled.div`
   background-image: url(https://wp.kihyeon.page/wp-content/uploads/KakaoTalk_Photo_2019-05-25-13-58-27.jpeg);
 `;
 
+const StyledLink = styled(Link)`
+  width: 100%;
+  ${respondTo.sm`
+    width: auto;
+  `}
+`;
+
 const InnerSection = styled.div`
   width: 100%;
   height: 100%;
@@ -27,27 +34,27 @@ const InnerSection = styled.div`
 const GallerySection = () => (
   <Section className="section">
     <InnerSection>
-      <Link direction="left" to="/project/butterfleye">
+      <StyledLink direction="left" to="/project/butterfleye">
         <HoverOverCard
           imgSrc="https://wp.kihyeon.page/wp-content/uploads/Butterfleye6.jpg"
           title="Butterfleye"
           content="FASHION EYEWEAR"
         />
-      </Link>
-      <Link direction="left" to="/404">
+      </StyledLink>
+      <StyledLink direction="left" to="/404">
         <HoverOverCard
           imgSrc="https://wp.kihyeon.page/wp-content/uploads/modulegoggle.jpg"
           title="MODULAR"
           content="SMART INDUSTRIAL SAFETY GOGGLE"
         />
-      </Link>
-      <Link direction="left" to="/project/sound-spot">
+      </StyledLink>
+      <StyledLink direction="left" to="/project/sound-spot">
         <HoverOverCard
           imgSrc="https://wp.kihyeon.page/wp-content/uploads/project/sound-spot/백뷰-디테일.124-min.jpg"
           title="Sound Spot"
           content="Sound signage film directional speaker"
         />
-      </Link>
+      </StyledLink>
     </InnerSection>
   </Section>
 );
