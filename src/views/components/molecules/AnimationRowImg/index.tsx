@@ -4,15 +4,11 @@ import { Container, Row, Col } from 'styled-bootstrap-grid';
 import { TimelineLite, Power1 } from 'gsap';
 // Utils
 import { rhythm } from '@style/typography';
-import { respondTo } from '@style/_respondTo';
+// Type
+import ImageWrap, { ImageWrapType } from '@atom/wrap/Image';
 
-const ImageWrap = styled.div`
-  text-align: center;
-  background-color: #dbdbdb;
-  font-size: 0;
-  line-height: 0;
+const CustomImageWrap = styled(ImageWrap)`
   img {
-    margin-bottom: 0;
     opacity: 0.2;
   }
   ${Row} {
@@ -36,16 +32,18 @@ const imgObserver = new IntersectionObserver(ImgAnimationCallback, {
   threshold: 0.7,
 });
 
-interface AnimationRowImgTpye {
+interface AnimationRowImgTpye extends ImageWrapType {
   imgSrc: string;
 }
-const AnimationRowImg = ({ imgSrc }: AnimationRowImgTpye) => {
+const AnimationRowImg = ({
+  imgSrc,
+  bgColor,
+  fullscreen,
+}: AnimationRowImgTpye) => {
   const Img = useRef<HTMLImageElement>(null);
-  useEffect(() => {
-    imgObserver.observe(Img.current);
-  });
+  useEffect(() => imgObserver.observe(Img.current));
   return (
-    <ImageWrap>
+    <CustomImageWrap bgColor={bgColor} fullscreen={fullscreen ? true : false}>
       <Container>
         <Row>
           <Col col>
@@ -53,14 +51,20 @@ const AnimationRowImg = ({ imgSrc }: AnimationRowImgTpye) => {
           </Col>
         </Row>
       </Container>
-    </ImageWrap>
+    </CustomImageWrap>
   );
 };
 
-interface AnimationRowImgTpye2 {
+interface AnimationRowImgTpye2 extends ImageWrapType {
   imgSrc: Array<string>;
+  fluid?: boolean;
 }
-export const AnimationRowImg2 = ({ imgSrc }: AnimationRowImgTpye2) => {
+export const AnimationRowImg2 = ({
+  imgSrc,
+  bgColor,
+  fullscreen,
+  fluid,
+}: AnimationRowImgTpye2) => {
   const Img1 = useRef<HTMLImageElement>(null);
   const Img2 = useRef<HTMLImageElement>(null);
   useEffect(() => {
@@ -68,18 +72,18 @@ export const AnimationRowImg2 = ({ imgSrc }: AnimationRowImgTpye2) => {
     imgObserver.observe(Img2.current);
   });
   return (
-    <ImageWrap>
-      <Container fluid>
+    <CustomImageWrap bgColor={bgColor} fullscreen={fullscreen ? true : false}>
+      <Container fluid={fluid}>
         <Row>
-          <Col col noGutter>
+          <Col col noGutter={fluid} style={{ textAlign: 'left' }}>
             <img src={imgSrc[0]} alt="" ref={Img1} />
           </Col>
-          <Col col noGutter>
+          <Col col noGutter={fluid} style={{ textAlign: 'right' }}>
             <img src={imgSrc[1]} alt="" ref={Img2} />
           </Col>
         </Row>
       </Container>
-    </ImageWrap>
+    </CustomImageWrap>
   );
 };
 
