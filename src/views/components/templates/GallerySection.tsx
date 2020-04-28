@@ -27,7 +27,7 @@ const InnerSection = styled.div`
 const GallerySection = () => (
   <Section className="section">
     <InnerSection>
-      <Link direction="left" to="/404">
+      <Link direction="left" to="/project/butterfleye">
         <HoverOverCard
           imgSrc="https://wp.kihyeon.page/wp-content/uploads/Butterfleye6.jpg"
           title="Butterfleye"
@@ -39,6 +39,13 @@ const GallerySection = () => (
           imgSrc="https://wp.kihyeon.page/wp-content/uploads/modulegoggle.jpg"
           title="MODULAR"
           content="SMART INDUSTRIAL SAFETY GOGGLE"
+        />
+      </Link>
+      <Link direction="left" to="/project/sound-spot">
+        <HoverOverCard
+          imgSrc="https://wp.kihyeon.page/wp-content/uploads/project/sound-spot/백뷰-디테일.124-min.jpg"
+          title="Sound Spot"
+          content="Sound signage film directional speaker"
         />
       </Link>
     </InnerSection>
