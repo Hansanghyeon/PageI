@@ -10,7 +10,9 @@ const DefaultTheme: StyleSystem = {
       dark: ['#232326', '#303437', '#2c2c2f'],
       light: ['#fff'],
     },
-    styleguid: {
+  },
+  project: {
+    soundSpot: {
       '$blue-grey': '#849296',
       $slate: '#56737a',
       $denim: '#336573',
@@ -23,6 +25,7 @@ const DefaultTheme: StyleSystem = {
 };
 
 export const DarkTheme: DarkStyleSystem = {
+  ...DefaultTheme,
   color: {
     ...DefaultTheme.color,
     bg: ['#232326'],

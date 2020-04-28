@@ -6,7 +6,7 @@ const SloganTitle = styled.span`
   font-size: 19px;
   font-weight: bold;
   line-height: 2.42;
-  color: ${({ theme }) => theme.color.styleguid['$slate']};
+  color: ${({ theme }) => theme.project.soundSpot['$slate']};
   margin-bottom: ${rhythm(1)};
 `;
 

@@ -13,7 +13,7 @@ const ConclusionSectionWrap = styled(SectionWrap)`
   text-align: center;
   p,
   b {
-    color: ${({ theme }) => theme.color.styleguid['$slate']};
+    color: ${({ theme }) => theme.project.soundSpot['$slate']};
     font-weight: bold;
   }
   b {

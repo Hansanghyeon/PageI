@@ -10,7 +10,7 @@ const PageDescriptionText = styled.span`
   font-style: normal;
   line-height: normal;
   letter-spacing: 1.8px;
-  color: ${({ theme }) => theme.color.styleguid['$slate']};
+  color: ${({ theme }) => theme.project.soundSpot['$slate']};
   ${respondTo.md`
     font-size: ${rhythm(0.8)};
   `}

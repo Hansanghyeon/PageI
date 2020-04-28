@@ -23,9 +23,9 @@ const MotiveSectionWrap = styled.div`
     }
   }
   ${SectiontTitleText} {
-    color: ${({ theme }) => theme.color.styleguid['$white']};
+    color: ${({ theme }) => theme.project.soundSpot['$white']};
     span {
-      color: ${({ theme }) => theme.color.styleguid['$denim']};
+      color: ${({ theme }) => theme.project.soundSpot['$denim']};
       font-size: 1.2rem;
       margin-left: 0.5rem;
     }

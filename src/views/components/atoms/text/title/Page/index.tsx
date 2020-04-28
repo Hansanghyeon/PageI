@@ -8,7 +8,7 @@ const PageTitleText = styled.span`
   font-weight: 500;
   letter-spacing: 3.6px;
   line-height: 1;
-  color: ${({ theme }) => theme.color.styleguid['$denim']};
+  color: ${({ theme }) => theme.project.soundSpot['$denim']};
   ${respondTo.md`
     font-size: ${rhythm(1.5)};
   `};
