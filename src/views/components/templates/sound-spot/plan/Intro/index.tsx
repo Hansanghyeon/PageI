@@ -26,6 +26,17 @@ const BodyRow = styled(Row)`
 `;
 
 const PlanIntroSection = () => {
+  const infoProps = {
+    info: {
+      title: 'Sound spot',
+      label: '_2020 Team project',
+      description: 'Sound signage film directional speaker',
+    },
+    color: {
+      project: 'soundSpot',
+      value: '$denim',
+    },
+  };
   return (
     <>
       <ImageWrap>
@@ -36,7 +47,7 @@ const PlanIntroSection = () => {
       <WrapRoot>
         <SectionTitleRow>
           <Col col>
-            <PageInfo />
+            <PageInfo {...infoProps} />
           </Col>
         </SectionTitleRow>
         <BodyRow>

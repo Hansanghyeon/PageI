@@ -43,22 +43,35 @@ const LabelWrap = styled.div`
   `}
 `;
 
-const PageInfo = () => (
-  <Wrap>
-    <WrapInner>
-      <TitleWrap>
-        <PageTitleText>Sound spot</PageTitleText>
-      </TitleWrap>
-      <LabelWrap>
-        <PageLabelText>_2020 Team project</PageLabelText>
-      </LabelWrap>
-      <DescriptionWrap>
-        <PageDescriptionText>
-          Sound signage film directional speaker
-        </PageDescriptionText>
-      </DescriptionWrap>
-    </WrapInner>
-  </Wrap>
-);
+type props = {
+  info: {
+    title: string;
+    label: string;
+    description: string;
+  };
+  color: {
+    project: string;
+    value: string;
+  };
+};
+
+const PageInfo = ({ info, color }: props) => {
+  const { title, label, description } = info;
+  return (
+    <Wrap>
+      <WrapInner>
+        <TitleWrap>
+          <PageTitleText color={color}>{title}</PageTitleText>
+        </TitleWrap>
+        <LabelWrap>
+          <PageLabelText color={color}>{label}</PageLabelText>
+        </LabelWrap>
+        <DescriptionWrap>
+          <PageDescriptionText>{description}</PageDescriptionText>
+        </DescriptionWrap>
+      </WrapInner>
+    </Wrap>
+  );
+};
 
 export default PageInfo;
