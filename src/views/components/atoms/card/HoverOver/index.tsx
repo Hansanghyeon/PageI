@@ -71,7 +71,7 @@ const CardInfo = styled.div`
   }
 `;
 const CardBg = styled.div<imgSrc>`
-  opacity: 0.5;
+  /* opacity: 0.5; */
   position: absolute;
   top: -20px;
   left: -20px;
@@ -137,7 +137,7 @@ const CardWrap = styled.div`
       }
     }
     ${CardBg} {
-      opacity: 0.8;
+      /* opacity: 0.8; */
       transition: 0.6s var(--hoverEasing), opacity 5s var(--hoverEasing);
       box-shadow: rgba(white, 0.2) 0 0 40px 5px, rgba(white, 1) 0 0 0 1px,
         rgba(black, 0.66) 0 30px 60px 0, inset #333 0 0 0 5px,
@@ -199,13 +199,13 @@ const HoverOverCard = ({ imgSrc, title, content }: Props) => {
   };
 
   const cardBgTransform = () => {
-    const rX = (mouseX / width) * 30;
-    const rY = (mouseY / height) * -30;
+    const rX = (mouseX / width) * 15;
+    const rY = (mouseY / height) * -15;
     return { transform: `translateX(${rX}px) translateY(${rY}px)` };
   };
   const cardStyle = () => {
-    const rX = (mouseX / width) * 40;
-    const rY = (mouseY / height) * -40;
+    const rX = (mouseX / width) * 15;
+    const rY = (mouseY / height) * -15;
     return { transform: `rotateY(${rX}deg) rotateX(${rY}deg)` };
   };
 

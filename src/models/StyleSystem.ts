@@ -8,13 +8,13 @@ interface Colors {
   primary: string;
   bg: string[];
   text: string[];
-  styleguid: any;
   grayscales: Grayscales;
 }
 
 interface DarkColors extends Colors {}
 interface StyleSystem {
   color: Colors;
+  project: any;
 }
 
 export interface DarkStyleSystem extends StyleSystem {}

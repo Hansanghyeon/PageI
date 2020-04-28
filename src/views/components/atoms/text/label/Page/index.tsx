@@ -7,7 +7,7 @@ const PageLabelText = styled.span`
   font-style: normal;
   line-height: normal;
   letter-spacing: 1.05px;
-  color: ${({ theme }) => theme.color.styleguid['$cool-grey']};
+  color: ${({ theme }) => theme.project.soundSpot['$cool-grey']};
   line-height: 1;
 `;
 

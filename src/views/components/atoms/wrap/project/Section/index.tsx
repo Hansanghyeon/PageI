@@ -7,7 +7,7 @@ import { respondTo } from '@style/_respondTo';
 const SectionWrap = styled(Container)`
   /* section base style */
   font-size: 14px;
-  color: ${({ theme }) => theme.color.styleguid['$blue-grey-two']};
+  color: ${({ theme }) => theme.project.soundSpot['$blue-grey-two']};
   padding-top: ${rhythm(2)};
   padding-bottom: ${rhythm(2)};
   ${respondTo.lg`

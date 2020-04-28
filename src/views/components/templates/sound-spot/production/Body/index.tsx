@@ -12,7 +12,7 @@ import SloganTitle from '@atom/text/title/Slogan';
 import ImageWrap from '@atom/wrap/Image';
 
 const StyledSectionWrap = styled(SectionWrap)`
-  color: ${({ theme }) => theme.color.styleguid['$slate']};
+  color: ${({ theme }) => theme.project.soundSpot['$slate']};
   ${respondTo.lg`
     position: absolute;
     top: 0px;
