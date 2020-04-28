@@ -28,9 +28,9 @@ const ImgAnimationCallback = (entries: any, observer: any) => {
     }
   });
 };
-const imgObserver = new IntersectionObserver(ImgAnimationCallback, {
-  threshold: 0.7,
-});
+// const imgObserver = new IntersectionObserver(ImgAnimationCallback, {
+//   threshold: 0.7,
+// });
 
 interface AnimationRowImgTpye extends ImageWrapType {
   imgSrc: string;
@@ -41,7 +41,13 @@ const AnimationRowImg = ({
   fullscreen,
 }: AnimationRowImgTpye) => {
   const Img = useRef<HTMLImageElement>(null);
-  useEffect(() => imgObserver.observe(Img.current));
+  const imgObserver = useRef();
+  useEffect(() => {
+    imgObserver.current = new IntersectionObserver(ImgAnimationCallback, {
+      threshold: 0.7,
+    });
+    imgObserver.current.observe(Img.current);
+  }, []);
   return (
     <CustomImageWrap bgColor={bgColor} fullscreen={fullscreen ? true : false}>
       <Container>
@@ -67,9 +73,13 @@ export const AnimationRowImg2 = ({
 }: AnimationRowImgTpye2) => {
   const Img1 = useRef<HTMLImageElement>(null);
   const Img2 = useRef<HTMLImageElement>(null);
+  const imgObserver = useRef();
   useEffect(() => {
-    imgObserver.observe(Img1.current);
-    imgObserver.observe(Img2.current);
+    imgObserver.current = new IntersectionObserver(ImgAnimationCallback, {
+      threshold: 0.7,
+    });
+    imgObserver.current.observe(Img1.current);
+    imgObserver.current.observe(Img2.current);
   });
   return (
     <CustomImageWrap bgColor={bgColor} fullscreen={fullscreen ? true : false}>

@@ -1,6 +1,5 @@
 import React from 'react';
 import ReactFullpage from '@fullpage/react-fullpage';
-import 'fullpage.js/vendors/scrolloverflow';
 import { createGlobalStyle } from 'styled-components';
 
 import SEO from '@view/components/seo';
@@ -15,10 +14,15 @@ const UniquePageWrap = createGlobalStyle`
   }
 `;
 
+const pluginWrapper = () => {
+  require('fullpage.js/vendors/scrolloverflow');
+};
+
 const IndexPage = () => (
   <>
     <SEO title="Home" />
     <ReactFullpage
+      debug={process.env.NODE_ENV !== 'production'}
       licenseKey={process.env.REACT_APP_FULLPAGE_LICENSE_KEY}
       scrollingSpeed={1000}
       navigation
@@ -32,6 +36,7 @@ const IndexPage = () => (
       ]}
       dragAndMove
       scrollOverflow
+      pluginWrapper={pluginWrapper}
       render={({ state, fullpageApi }: any) => {
         return (
           <>
