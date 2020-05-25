@@ -4,6 +4,7 @@ import { createGlobalStyle } from 'styled-components';
 import IntroSection from '@template/modular/intro';
 import BackgroundSection from '@template/modular/background';
 import InsightSection from '@template/modular/insight';
+import ConceptSection from '@template/modular/concept';
 
 const GlobalStyle = createGlobalStyle`
   body {
@@ -25,6 +26,7 @@ const Modular = () => (
     <IntroSection />
     <BackgroundSection />
     <InsightSection />
+    <ConceptSection />
   </>
 );
 
