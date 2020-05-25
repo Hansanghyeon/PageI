@@ -27,8 +27,10 @@ const DefaultTheme: StyleSystem = {
       $main: '#454b56',
       $point: '#ed6b22',
       $darkBg: '#363A45',
+      $darkBg2: '#38404C',
       $darkColor: '#7e8c99',
       $darkTitle: '#c1cbe5',
+      $orderColor: '#38404C',
     },
   },
 };
