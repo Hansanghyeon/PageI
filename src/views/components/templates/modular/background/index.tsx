@@ -92,14 +92,14 @@ const BackgroundSection = () => {
             수 있다.
           </p>
         </Col.default>
-        <Col.SmallGrid col={12} md={6}>
+        <Col.default col={12} md={6}>
           <Title.post>[ 스마트 팩토리의 9가지 구성요소 ]</Title.post>
           <Text.small>출처: 국가기술표준원 기술보고서 제78호</Text.small>
           <img
             src={`${process.env.GATSBY_FILE_SERVER}/project/modular/smart_factory-004.png`}
             alt=""
           />
-        </Col.SmallGrid>
+        </Col.default>
       </Row>
     </Container>
   );
