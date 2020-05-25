@@ -6,7 +6,8 @@ import HoverOverCard from '@atom/card/HoverOver';
 import { media } from 'styled-bootstrap-grid';
 
 const Section = styled.div`
-  background-image: url(https://wp.kihyeon.page/wp-content/uploads/KakaoTalk_Photo_2019-05-25-13-58-27.jpeg);
+  background-image: url(${process.env.GATSBY_FILE_SERVER}/site/main/kakaotalk_photo_2019-05-25-13-58-27.jpeg);
+  background-size: cover;
 `;
 
 const StyledLink = styled(Link)`
@@ -36,21 +37,21 @@ const GallerySection = () => (
     <InnerSection>
       <StyledLink direction="left" to="/project/butterfleye">
         <HoverOverCard
-          imgSrc="https://wp.kihyeon.page/wp-content/uploads/Butterfleye6.jpg"
+          imgSrc={`${process.env.GATSBY_FILE_SERVER}/project/butterfleye/butterfleye6.jpg`}
           title="Butterfleye"
           content="FASHION EYEWEAR"
         />
       </StyledLink>
       <StyledLink direction="left" to="/404">
         <HoverOverCard
-          imgSrc="https://wp.kihyeon.page/wp-content/uploads/modulegoggle.jpg"
+          imgSrc={`${process.env.GATSBY_FILE_SERVER}/project/modular/modulegoggle.jpg`}
           title="MODULAR"
           content="SMART INDUSTRIAL SAFETY GOGGLE"
         />
       </StyledLink>
       <StyledLink direction="left" to="/project/sound-spot">
         <HoverOverCard
-          imgSrc="https://wp.kihyeon.page/wp-content/uploads/project/sound-spot/백뷰-디테일.124-min.jpg"
+          imgSrc={`${process.env.GATSBY_FILE_SERVER}/project/sound-spot/-.124-min.jpg`}
           title="Sound Spot"
           content="Sound signage film directional speaker"
         />

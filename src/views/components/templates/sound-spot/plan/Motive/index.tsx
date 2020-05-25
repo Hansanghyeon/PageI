@@ -8,7 +8,7 @@ import SectionTitleRow from '@atom/wrap/project/SectionTitleRow';
 import { rhythm } from '@style/typography';
 
 const MotiveSectionWrap = styled.div`
-  background-image: url(https://wp.kihyeon.page/wp-content/uploads/project/sound-spot/연출-이미지-2-min.png);
+  background-image: url(${process.env.GATSBY_FILE_SERVER}/project/sound-spot/--2-min.png);
   height: 100vh;
   min-height: 812px;
   background-size: cover;

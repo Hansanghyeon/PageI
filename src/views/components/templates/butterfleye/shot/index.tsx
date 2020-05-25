@@ -14,16 +14,16 @@ const AnimationRowImg2Wrap = styled.div`
 
 const Shot = () => {
   const singleImg = [
-    'https://wp.kihyeon.page/wp-content/uploads/project/butterfleye/bu-eye-001.jpg',
-    'https://wp.kihyeon.page/wp-content/uploads/project/butterfleye/bu-eye-002.jpg',
-    'https://wp.kihyeon.page/wp-content/uploads/project/butterfleye/Butterfleye1.jpg',
-    'https://wp.kihyeon.page/wp-content/uploads/project/butterfleye/bu-eye-003-scaled-1.jpg',
-    'https://wp.kihyeon.page/wp-content/uploads/project/butterfleye/2차-수정-진행사항-scaled.jpg',
+    `${process.env.GATSBY_FILE_SERVER}/project/butterfleye/bu-eye-001.jpg`,
+    `${process.env.GATSBY_FILE_SERVER}/project/butterfleye/bu-eye-002.jpg`,
+    `${process.env.GATSBY_FILE_SERVER}/project/butterfleye/butterfleye1.jpg`,
+    `${process.env.GATSBY_FILE_SERVER}/project/butterfleye/bu-eye-003-scaled-1.jpg`,
+    `${process.env.GATSBY_FILE_SERVER}/project/butterfleye/2---scaled-1.jpg`,
   ];
   const aniSingleImg = [
-    'https://wp.kihyeon.page/wp-content/uploads/project/butterfleye/Butterfleye3-1.jpg',
-    'https://wp.kihyeon.page/wp-content/uploads/project/butterfleye/Butterfleye4realreal.jpg',
-    'https://wp.kihyeon.page/wp-content/uploads/project/butterfleye/Butterfleye6.jpg',
+    `${process.env.GATSBY_FILE_SERVER}/project/butterfleye/butterfleye3-1.jpg`,
+    `${process.env.GATSBY_FILE_SERVER}/project/butterfleye/butterfleye4realreal.jpg`,
+    `${process.env.GATSBY_FILE_SERVER}/project/butterfleye/butterfleye6.jpg`,
   ];
   return (
     <>
@@ -31,8 +31,8 @@ const Shot = () => {
         <AnimationRowImg2
           bgColor="transparent"
           imgSrc={[
-            'https://wp.kihyeon.page/wp-content/uploads/project/butterfleye/butterfleye.png',
-            'https://wp.kihyeon.page/wp-content/uploads/project/butterfleye/butterfly.jpg',
+            `${process.env.GATSBY_FILE_SERVER}/project/butterfleye/butterfleye.png`,
+            `${process.env.GATSBY_FILE_SERVER}/project/butterfleye/butterfly.jpg`,
           ]}
         />
       </AnimationRowImg2Wrap>

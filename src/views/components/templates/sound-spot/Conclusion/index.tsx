@@ -5,9 +5,6 @@ import styled from 'styled-components';
 import { rhythm } from '@style/typography';
 // Components
 import SectionWrap from '@atom/wrap/project/Section';
-import SectiontTitleText from '@atom/text/title/Section';
-import SectionTitleRow from '@atom/wrap/project/SectionTitleRow';
-import SloganTitle from '@atom/text/title/Slogan';
 
 const ConclusionSectionWrap = styled(SectionWrap)`
   text-align: center;
@@ -27,7 +24,7 @@ const SoundspotConclusion = () => (
       <Row>
         <Col col noGutter>
           <img
-            src="https://wp.kihyeon.page/wp-content/uploads/project/sound-spot/자산-14-min.png"
+            src={`${process.env.GATSBY_FILE_SERVER}/project/sound-spot/-14-min.png`}
             alt=""
           />
         </Col>

@@ -14,7 +14,7 @@ const SolutionFunctionSection = () => {
     <>
       <ImageWrap style={{ marginTop: rhythm(4) }}>
         <img
-          src="https://wp.kihyeon.page/wp-content/uploads/project/sound-spot/연출-이미지-3-min.png"
+          src={`${process.env.GATSBY_FILE_SERVER}/project/sound-spot/--3-min.png`}
           alt=""
         />
       </ImageWrap>
@@ -49,7 +49,7 @@ const SolutionFunctionSection = () => {
       </SectionWrap>
       <ImageWrap style={{ marginBottom: rhythm(4) }}>
         <img
-          src="https://wp.kihyeon.page/wp-content/uploads/project/sound-spot/스케치-min.jpg"
+          src={`${process.env.GATSBY_FILE_SERVER}/project/sound-spot/-min-1.jpg`}
           alt=""
         />
       </ImageWrap>
