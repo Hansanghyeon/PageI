@@ -64,10 +64,12 @@ const PageInfo = ({ info, color }: props) => {
           <PageTitleText color={color}>{title}</PageTitleText>
         </TitleWrap>
         <LabelWrap>
-          <PageLabelText color={color}>{label}</PageLabelText>
+          <PageLabelText color={color} style={{ opacity: 0.5 }}>
+            {label}
+          </PageLabelText>
         </LabelWrap>
         <DescriptionWrap>
-          <PageDescriptionText>{description}</PageDescriptionText>
+          <PageDescriptionText color={color}>{description}</PageDescriptionText>
         </DescriptionWrap>
       </WrapInner>
     </Wrap>
