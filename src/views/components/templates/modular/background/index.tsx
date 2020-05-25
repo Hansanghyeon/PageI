@@ -1,7 +1,6 @@
 import React from 'react';
 import { Container, Row } from 'styled-bootstrap-grid';
 
-import ImageWrap from '@atom/wrap/Image';
 import {
   SectiontTitleWrap,
   SectiontTitleText,
@@ -25,12 +24,10 @@ const BackgroundSection = () => {
       </Row>
       <Row>
         <Col.default col>
-          <ImageWrap>
-            <img
-              src={`${process.env.GATSBY_FILE_SERVER}/project/modular/layer-4-1.jpg`}
-              alt=""
-            />
-          </ImageWrap>
+          <img
+            src={`${process.env.GATSBY_FILE_SERVER}/project/modular/layer-4-1.jpg`}
+            alt=""
+          />
         </Col.default>
       </Row>
       <Empty />
