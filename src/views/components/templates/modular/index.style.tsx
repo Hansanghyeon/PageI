@@ -7,6 +7,7 @@ import { rhythm } from '@style/typography';
 export const SectiontTitleWrap = styled.div`
   display: flex;
   justify-content: space-between;
+  flex-wrap: wrap;
   align-items: flex-end;
   margin-bottom: ${rhythm(1)};
 `;
