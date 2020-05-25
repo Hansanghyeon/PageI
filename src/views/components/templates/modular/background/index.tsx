@@ -75,7 +75,7 @@ const BackgroundSection = () => {
       </Row>
       <Empty />
       <Row>
-        <Col.SmallGrid col={12} md={6}>
+        <Col.default col={12} md={6}>
           <Title.main>
             [ 02. <span className="point">IoT와 5G 그리고 AR</span> ]
           </Title.main>
@@ -91,7 +91,7 @@ const BackgroundSection = () => {
             기술은 이처럼 효율적 작업 환경을 구성하기위한 가장 기초적 요소 라 할
             수 있다.
           </p>
-        </Col.SmallGrid>
+        </Col.default>
         <Col.SmallGrid col={12} md={6}>
           <Title.post>[ 스마트 팩토리의 9가지 구성요소 ]</Title.post>
           <Text.small>출처: 국가기술표준원 기술보고서 제78호</Text.small>
