@@ -3,7 +3,7 @@ import styled from 'styled-components';
 // Components
 import Link from '@atom/Link';
 import HoverOverCard from '@atom/card/HoverOver';
-import { respondTo } from '@style/_respondTo';
+import { media } from 'styled-bootstrap-grid';
 
 const Section = styled.div`
   background-image: url(https://wp.kihyeon.page/wp-content/uploads/KakaoTalk_Photo_2019-05-25-13-58-27.jpeg);
@@ -11,7 +11,7 @@ const Section = styled.div`
 
 const StyledLink = styled(Link)`
   width: 100%;
-  ${respondTo.sm`
+  ${media.sm`
     width: auto;
   `}
 `;
@@ -25,7 +25,7 @@ const InnerSection = styled.div`
   justify-content: center;
   padding-top: 120px;
   padding-bottom: 120px;
-  ${respondTo.sm`
+  ${media.sm`
     padding-top: 100px;
     padding-bottom: 200px;
   `};
