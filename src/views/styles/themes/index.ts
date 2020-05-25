@@ -22,7 +22,10 @@ const DefaultTheme: StyleSystem = {
       '$blue-grey-two': '#8c9198',
     },
     modular: {
+      $bg: '#e3e6e9',
+      $color: '#8d9299',
       $main: '#454b56',
+      $point: '#ed6b22',
     },
   },
 };
