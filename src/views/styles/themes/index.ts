@@ -31,6 +31,7 @@ const DefaultTheme: StyleSystem = {
       $darkColor: '#7e8c99',
       $darkTitle: '#c1cbe5',
       $orderColor: '#38404C',
+      $tail: '#454B56',
     },
   },
 };

@@ -7,6 +7,7 @@ import InsightSection from '@template/modular/insight';
 import ConceptSection from '@template/modular/concept';
 import ConclusionSection from '@template/modular/conclusion';
 import ProductSection from '@template/modular/product';
+import TailSection from '@template/modular/tail';
 
 const GlobalStyle = createGlobalStyle`
   body {
@@ -31,6 +32,7 @@ const Modular = () => (
     <ConceptSection />
     <ConclusionSection />
     <ProductSection />
+    <TailSection />
   </>
 );
 

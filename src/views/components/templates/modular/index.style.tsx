@@ -63,6 +63,11 @@ export const Title = {
     font-size: 1.8em;
     margin-bottom: ${rhythm(1.5)};
   `,
+  tail: styled.div`
+    color: ${({ theme }) => theme.project.modular.$tail};
+    font-size: 48px;
+    line-height: 1.2em;
+  `,
 };
 
 export const Text = {
@@ -88,6 +93,9 @@ export const Text = {
   `,
   point: styled.span`
     color: ${({ theme }) => theme.project.modular.$point};
+  `,
+  tail: styled.div`
+    color: ${({ theme }) => theme.project.modular.$tail};
   `,
 };
 
@@ -140,6 +148,7 @@ export const Container = {
       max-width: 900px;
       width: 80%;
       margin-bottom: ${rhythm(4)};
+      border-radius: 4px;
     }
   `,
 };
@@ -156,4 +165,5 @@ export const Img = styled.img`
   width: 100% !important;
   max-width: 100% !important;
   margin-bottom: 0 !important;
+  border-radius: 0;
 `;

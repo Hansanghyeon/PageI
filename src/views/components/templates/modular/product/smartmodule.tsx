@@ -108,6 +108,10 @@ const SmartModules = {
       <Img
         src={`${process.env.GATSBY_FILE_SERVER}/project/modular/conclusion-structoure-001.jpg`}
         alt=""
+        style={{
+          borderTopLeftRadius: '8px',
+          borderTopRightRadius: '8px',
+        }}
       />
       <Img
         src={`${process.env.GATSBY_FILE_SERVER}/project/modular/conclusion-structoure-002.jpg`}
@@ -120,6 +124,10 @@ const SmartModules = {
       <Img
         src={`${process.env.GATSBY_FILE_SERVER}/project/modular/conclusion-structoure-004-1.jpg`}
         alt=""
+        style={{
+          borderBottomLeftRadius: '8px',
+          borderBottomRightRadius: '8px',
+        }}
       />
     </div>
   ),
