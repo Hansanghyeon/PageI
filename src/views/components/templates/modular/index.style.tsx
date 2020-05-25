@@ -1,5 +1,5 @@
-import styled from 'styled-components';
-import { media, Col as _Col } from 'styled-bootstrap-grid';
+import styled, { css } from 'styled-components';
+import { media, Col as _Col, Row } from 'styled-bootstrap-grid';
 
 import * as _SectiontTitleText from '@atom/text/title/Section';
 import { rhythm } from '@style/typography';
@@ -11,15 +11,25 @@ export const SectiontTitleWrap = styled.div`
   align-items: flex-end;
   margin-bottom: ${rhythm(1)};
 `;
-export const SectiontTitleText = styled(_SectiontTitleText.default)`
+
+const Dark_SectiontTitleText = css`
+  color: ${({ theme }) => theme.project.modular.$darkTitle};
+`;
+type sProps = {
+  dark?: boolean;
+};
+export const SectiontTitleText = styled(_SectiontTitleText.default)<sProps>`
   color: ${({ theme }) => theme.project.modular.$main};
   letter-spacing: 0.2em;
   font-size: ${rhythm(1)};
   line-height: 1.4;
+  font-weight: 100;
+  ${({ dark }) => dark && Dark_SectiontTitleText}
 `;
 
 export const Empty = styled.div`
   margin-bottom: ${rhythm(1.5)};
+  width: 100%;
   ${media.md`
     margin-bottom: ${rhythm(3)};
   `}
@@ -61,5 +71,16 @@ export const Col = {
     }
   `,
 };
-
+export const _Row = {
+  bg: styled(Row)`
+    background-color: ${({ theme }) => theme.project.modular.$darkBg};
+    color: ${({ theme }) => theme.project.modular.$darkColor};
+    ${Title.main}, ${Title.post} {
+      color: ${({ theme }) => theme.project.modular.$darkColor};
+    }
+    img {
+      margin: auto;
+    }
+  `,
+};
 export const Type = styled.span``;
