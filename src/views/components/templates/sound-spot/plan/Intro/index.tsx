@@ -2,7 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import { Container, Row, Col } from 'styled-bootstrap-grid';
 // Utils
-import { respondTo } from '@style/_respondTo';
+import { media } from 'styled-bootstrap-grid';
 import { rhythm } from '@style/typography';
 // Components
 import PageInfo from '@molecule/PageInfo';
@@ -13,14 +13,14 @@ import SectionTitleRow from '@atom/wrap/project/SectionTitleRow';
 
 const WrapRoot = styled(SectionWrap)`
   font-size: ${rhythm(1 / 3)};
-  ${respondTo.md`
+  ${media.md`
     font-size: ${rhythm(1 / 2)};
   `};
 `;
 
 const BodyRow = styled(Row)`
   margin-bottom: ${rhythm(2)};
-  ${respondTo.md`
+  ${media.md`
     margin-bottom: ${rhythm(4)};
   `};
 `;

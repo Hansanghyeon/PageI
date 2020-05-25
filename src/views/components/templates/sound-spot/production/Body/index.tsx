@@ -2,7 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import { Container, Row, Col } from 'styled-bootstrap-grid';
 // Utils
-import { respondTo } from '@style/_respondTo';
+import { media } from 'styled-bootstrap-grid';
 import { rhythm } from '@style/typography';
 // Components
 import SectionWrap from '@atom/wrap/project/Section';
@@ -13,7 +13,7 @@ import ImageWrap from '@atom/wrap/Image';
 
 const StyledSectionWrap = styled(SectionWrap)`
   color: ${({ theme }) => theme.project.soundSpot['$slate']};
-  ${respondTo.lg`
+  ${media.lg`
     position: absolute;
     top: 0px;
     left: 50%;

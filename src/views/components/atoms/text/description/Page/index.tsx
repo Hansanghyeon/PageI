@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 // Utils
-import { respondTo } from '@style/_respondTo';
+import { media } from 'styled-bootstrap-grid';
 import { rhythm } from '@style/typography';
 
 const PageDescriptionText = styled.span`
@@ -11,7 +11,7 @@ const PageDescriptionText = styled.span`
   line-height: normal;
   letter-spacing: 1.8px;
   color: ${({ theme }) => theme.project.soundSpot['$slate']};
-  ${respondTo.md`
+  ${media.md`
     font-size: ${rhythm(0.8)};
   `}
 `;

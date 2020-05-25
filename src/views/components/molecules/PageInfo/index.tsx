@@ -1,7 +1,7 @@
 import React, { useRef } from 'react';
 import styled from 'styled-components';
 // Utils
-import { respondTo } from '@style/_respondTo';
+import { media } from 'styled-bootstrap-grid';
 import { rhythm } from '@style/typography';
 // components
 import PageTitleText from '@atom/text/title/Page';
@@ -12,7 +12,7 @@ const Wrap = styled.div`
   display: inline-block;
 `;
 const WrapInner = styled.div`
-  ${respondTo.md`
+  ${media.md`
     display: grid;
     grid-template-columns: repeat(2, auto);
     grid-template-rows: repeat(2, auto);
@@ -22,20 +22,20 @@ const WrapInner = styled.div`
 `;
 const TitleWrap = styled.div`
   margin-bottom: ${rhythm(1 / 2)};
-  ${respondTo.md`
+  ${media.md`
     grid-area: 1 / 1 / 2 / 2;
     align-self: end;
     margin-bottom: 0;
   `};
 `;
 const DescriptionWrap = styled.div`
-  ${respondTo.md`
+  ${media.md`
     grid-area: 2 / 1 / 3 / 3;
   `}
 `;
 const LabelWrap = styled.div`
   margin-bottom: ${rhythm(1 / 2)};
-  ${respondTo.md`
+  ${media.md`
     grid-area: 1 / 2 / 2 / 3;
     justify-self: end;
     align-self: end;

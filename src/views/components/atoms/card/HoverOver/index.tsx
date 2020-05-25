@@ -1,6 +1,6 @@
 import React, { useRef, useState, useEffect } from 'react';
 import styled from 'styled-components';
-import { respondTo } from '@style/_respondTo';
+import { media } from 'styled-bootstrap-grid';
 
 const CardRoot = styled.div`
   display: flex;
@@ -8,7 +8,7 @@ const CardRoot = styled.div`
   justify-content: center;
   width: 100%;
   margin-bottom: 24px;
-  ${respondTo.sm`
+  ${media.sm`
     width: auto;
     margin-bottom: 0;
   `};
@@ -117,7 +117,7 @@ const CardWrap = styled.div`
   transform: perspective(800px);
   transform-style: preserve-3d;
   cursor: pointer;
-  ${respondTo.sm`
+  ${media.sm`
     flex: 0 0 480;
     width: 480px;
     height: 320px;
