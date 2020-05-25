@@ -41,7 +41,9 @@ const PlanIntroSection = () => {
     <>
       <ImageWrap>
         <Container>
-          <img src="https://wp.kihyeon.page/wp-content/uploads/project/sound-spot/프론트-뷰_최종본-min.png" />
+          <img
+            src={`${process.env.GATSBY_FILE_SERVER}/project/sound-spot/-_-min.png`}
+          />
         </Container>
       </ImageWrap>
       <WrapRoot>
