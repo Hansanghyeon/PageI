@@ -21,6 +21,9 @@ const DefaultTheme: StyleSystem = {
       $white: '#ffffff',
       '$blue-grey-two': '#8c9198',
     },
+    modular: {
+      $main: '#454b56',
+    },
   },
 };
 
