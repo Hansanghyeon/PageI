@@ -42,7 +42,7 @@ const GallerySection = () => (
           content="FASHION EYEWEAR"
         />
       </StyledLink>
-      <StyledLink direction="left" to="/404">
+      <StyledLink direction="left" to="/project/modular">
         <HoverOverCard
           imgSrc={`${process.env.GATSBY_FILE_SERVER}/project/modular/modulegoggle.jpg`}
           title="MODULAR"
