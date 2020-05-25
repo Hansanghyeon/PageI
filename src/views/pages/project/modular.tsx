@@ -6,6 +6,7 @@ import BackgroundSection from '@template/modular/background';
 import InsightSection from '@template/modular/insight';
 import ConceptSection from '@template/modular/concept';
 import ConclusionSection from '@template/modular/conclusion';
+import ProductSection from '@template/modular/product';
 
 const GlobalStyle = createGlobalStyle`
   body {
@@ -29,6 +30,7 @@ const Modular = () => (
     <InsightSection />
     <ConceptSection />
     <ConclusionSection />
+    <ProductSection />
   </>
 );
 
