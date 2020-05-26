@@ -18,8 +18,8 @@ const CustomImageWrap = styled(ImageWrap)`
 
 const ImgAnimationCallback = (entries: any, observer: any) => {
   entries.forEach((entry: any) => {
+    const tl = new TimelineLite();
     if (entry.isIntersecting) {
-      const tl = new TimelineLite();
       tl.to([entry.target], 0.45, {
         ease: Power1.easeOut,
         opacity: '1',
@@ -28,9 +28,6 @@ const ImgAnimationCallback = (entries: any, observer: any) => {
     }
   });
 };
-// const imgObserver = new IntersectionObserver(ImgAnimationCallback, {
-//   threshold: 0.7,
-// });
 
 interface AnimationRowImgTpye extends ImageWrapType {
   imgSrc: string;
