@@ -51,7 +51,7 @@ const GallerySection = () => (
       </StyledLink>
       <StyledLink direction="left" to="/project/sound-spot">
         <HoverOverCard
-          imgSrc={`${process.env.GATSBY_FILE_SERVER}/-.124-min.jpg`}
+          imgSrc={`${process.env.GATSBY_FILE_SERVER}/124-min.jpg`}
           title="Sound Spot"
           content="Sound signage film directional speaker"
         />

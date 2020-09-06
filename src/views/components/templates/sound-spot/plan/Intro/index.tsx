@@ -41,7 +41,7 @@ const PlanIntroSection = () => {
     <>
       <ImageWrap>
         <Container>
-          <img src={`${process.env.GATSBY_FILE_SERVER}/-_-min.png`} />
+          <img src={`${process.env.GATSBY_FILE_SERVER}/min.png`} />
         </Container>
       </ImageWrap>
       <WrapRoot>

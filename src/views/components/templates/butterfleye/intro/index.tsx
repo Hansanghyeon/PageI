@@ -47,7 +47,7 @@ const IntroSection = () => {
   return (
     <>
       <ImageWrap fullscreen>
-        <img src={`${process.env.GATSBY_FILE_SERVER}/-3-3.jpg`} />
+        <img src={`${process.env.GATSBY_FILE_SERVER}/3-3.jpg`} />
       </ImageWrap>
       <WrapRoot>
         <SectionTitleRow>
