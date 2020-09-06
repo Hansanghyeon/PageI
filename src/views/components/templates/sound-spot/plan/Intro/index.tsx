@@ -41,9 +41,7 @@ const PlanIntroSection = () => {
     <>
       <ImageWrap>
         <Container>
-          <img
-            src={`${process.env.GATSBY_FILE_SERVER}/project/sound-spot/-_-min.png`}
-          />
+          <img src={`${process.env.GATSBY_FILE_SERVER}/-_-min.png`} />
         </Container>
       </ImageWrap>
       <WrapRoot>

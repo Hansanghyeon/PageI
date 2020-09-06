@@ -24,10 +24,7 @@ const BackgroundSection = () => {
       </Row>
       <Row>
         <Col.default col>
-          <img
-            src={`${process.env.GATSBY_FILE_SERVER}/project/modular/layer-4-1.jpg`}
-            alt=""
-          />
+          <img src={`${process.env.GATSBY_FILE_SERVER}/layer-4-1.jpg`} alt="" />
         </Col.default>
       </Row>
       <Empty />
@@ -56,7 +53,7 @@ const BackgroundSection = () => {
               <Title.post>[ 글로벌 스마트팩토리 시장 ]</Title.post>
               <Text.small>출처: 포스코경영연구원&중소기업진흥정</Text.small>
               <img
-                src={`${process.env.GATSBY_FILE_SERVER}/project/modular/smart_factory-002.png`}
+                src={`${process.env.GATSBY_FILE_SERVER}/smart_factory-002.png`}
                 alt=""
               />
               <Text.small>단위: 억 달러</Text.small>
@@ -65,7 +62,7 @@ const BackgroundSection = () => {
               <Title.post>[ 스마트 팩토리 도입효과 ]</Title.post>
               <Text.small>출처: 민관합동스마트공장 추진단</Text.small>
               <img
-                src={`${process.env.GATSBY_FILE_SERVER}/project/modular/smart_factory-003.png`}
+                src={`${process.env.GATSBY_FILE_SERVER}/smart_factory-003.png`}
                 alt=""
               />
               <Text.small>단위: 억 달러</Text.small>
@@ -96,7 +93,7 @@ const BackgroundSection = () => {
           <Title.post>[ 스마트 팩토리의 9가지 구성요소 ]</Title.post>
           <Text.small>출처: 국가기술표준원 기술보고서 제78호</Text.small>
           <img
-            src={`${process.env.GATSBY_FILE_SERVER}/project/modular/smart_factory-004.png`}
+            src={`${process.env.GATSBY_FILE_SERVER}/smart_factory-004.png`}
             alt=""
           />
         </Col.default>

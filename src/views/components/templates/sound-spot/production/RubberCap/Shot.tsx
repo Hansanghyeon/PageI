@@ -5,7 +5,7 @@ import AnimationRowImg from '@molecule/AnimationRowImg';
 const SoundspotRubberCapShot = () => (
   <>
     <AnimationRowImg
-      imgSrc={`${process.env.GATSBY_FILE_SERVER}/project/sound-spot/-.122-min-1.png`}
+      imgSrc={`${process.env.GATSBY_FILE_SERVER}/-.122-min-1.png`}
     />
   </>
 );

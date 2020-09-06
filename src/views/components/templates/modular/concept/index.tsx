@@ -17,7 +17,7 @@ const ConceptSection = () => {
     <Container>
       <Row>
         <img
-          src={`${process.env.GATSBY_FILE_SERVER}/project/modular/modulegoggle-concept_start.png`}
+          src={`${process.env.GATSBY_FILE_SERVER}/modulegoggle-concept_start.png`}
           alt=""
           style={{ width: '100%', marginBottom: 0 }}
         />
@@ -50,7 +50,7 @@ const ConceptSection = () => {
         </Col.default>
         <Col.SmallGrid col={12} md={6}>
           <img
-            src={`${process.env.GATSBY_FILE_SERVER}/project/modular/concept-001.png`}
+            src={`${process.env.GATSBY_FILE_SERVER}/concept-001.png`}
             alt=""
           />
           <Text.small style={{ textAlign: 'center' }}>
@@ -72,12 +72,9 @@ const ConceptSection = () => {
         </Col.default>
       </_Row.bg>
       <_Row.bg>
+        <img src={`${process.env.GATSBY_FILE_SERVER}/concept-002.png`} alt="" />
         <img
-          src={`${process.env.GATSBY_FILE_SERVER}/project/modular/concept-002.png`}
-          alt=""
-        />
-        <img
-          src={`${process.env.GATSBY_FILE_SERVER}/project/modular/blueprint.png`}
+          src={`${process.env.GATSBY_FILE_SERVER}/blueprint.png`}
           alt=""
           style={{ marginBottom: '1rem' }}
         />
@@ -101,14 +98,14 @@ const ConceptSection = () => {
         </Col.default>
         <Col.SmallGrid col={12} md={6}>
           <img
-            src={`${process.env.GATSBY_FILE_SERVER}/project/modular/concept-plus-img-001.jpeg`}
+            src={`${process.env.GATSBY_FILE_SERVER}/concept-plus-img-001.jpeg`}
             alt=""
           />
         </Col.SmallGrid>
       </_Row.bg>
       <Row>
         <img
-          src={`${process.env.GATSBY_FILE_SERVER}/project/modular/modulegoggle-concept_end.png`}
+          src={`${process.env.GATSBY_FILE_SERVER}/modulegoggle-concept_end.png`}
           alt=""
           style={{ width: '100%' }}
         />

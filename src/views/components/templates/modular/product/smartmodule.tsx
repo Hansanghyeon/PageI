@@ -19,7 +19,7 @@ const SmartModule: React.FC<props> = ({
     <Row>
       <Col.default col={12} md={7}>
         <img
-          src={`${process.env.GATSBY_FILE_SERVER}/project/modular/${imgSrc}`}
+          src={`${process.env.GATSBY_FILE_SERVER}/${imgSrc}`}
           alt=""
           style={{ marginBottom: 0 }}
         />
@@ -106,7 +106,7 @@ const SmartModules = {
   USING_IMAGES: () => (
     <div style={{ lineHeight: 0 }}>
       <Img
-        src={`${process.env.GATSBY_FILE_SERVER}/project/modular/conclusion-structoure-001.jpg`}
+        src={`${process.env.GATSBY_FILE_SERVER}/conclusion-structoure-001.jpg`}
         alt=""
         style={{
           borderTopLeftRadius: '8px',
@@ -114,15 +114,15 @@ const SmartModules = {
         }}
       />
       <Img
-        src={`${process.env.GATSBY_FILE_SERVER}/project/modular/conclusion-structoure-002.jpg`}
+        src={`${process.env.GATSBY_FILE_SERVER}/conclusion-structoure-002.jpg`}
         alt=""
       />
       <Img
-        src={`${process.env.GATSBY_FILE_SERVER}/project/modular/conclusion-structoure-003.jpg`}
+        src={`${process.env.GATSBY_FILE_SERVER}/conclusion-structoure-003.jpg`}
         alt=""
       />
       <Img
-        src={`${process.env.GATSBY_FILE_SERVER}/project/modular/conclusion-structoure-004-1.jpg`}
+        src={`${process.env.GATSBY_FILE_SERVER}/conclusion-structoure-004-1.jpg`}
         alt=""
         style={{
           borderBottomLeftRadius: '8px',

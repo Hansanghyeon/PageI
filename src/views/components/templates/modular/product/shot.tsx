@@ -7,11 +7,11 @@ export const one = () => {
     <>
       <AnimationRowImg
         bgColor="transparent"
-        imgSrc={`${process.env.GATSBY_FILE_SERVER}/project/modular/conclusion-img01-.png`}
+        imgSrc={`${process.env.GATSBY_FILE_SERVER}/conclusion-img01-.png`}
       />
       <AnimationRowImg
         bgColor="transparent"
-        imgSrc={`${process.env.GATSBY_FILE_SERVER}/project/modular/conclusion-img02-scaled-1.png`}
+        imgSrc={`${process.env.GATSBY_FILE_SERVER}/conclusion-img02-scaled-1.png`}
       />
     </>
   );
@@ -22,15 +22,15 @@ export const two = () => {
     <>
       <AnimationRowImg
         bgColor="transparent"
-        imgSrc={`${process.env.GATSBY_FILE_SERVER}/project/modular/conclusion-case-01.png`}
+        imgSrc={`${process.env.GATSBY_FILE_SERVER}/conclusion-case-01.png`}
       />
       <AnimationRowImg
         bgColor="transparent"
-        imgSrc={`${process.env.GATSBY_FILE_SERVER}/project/modular/conclusion-case-02.png`}
+        imgSrc={`${process.env.GATSBY_FILE_SERVER}/conclusion-case-02.png`}
       />
       <AnimationRowImg
         bgColor="transparent"
-        imgSrc={`${process.env.GATSBY_FILE_SERVER}/project/modular/conclusion-case-03.png`}
+        imgSrc={`${process.env.GATSBY_FILE_SERVER}/conclusion-case-03.png`}
       />
     </>
   );

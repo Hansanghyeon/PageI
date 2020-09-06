@@ -13,10 +13,7 @@ const SolutionFunctionSection = () => {
   return (
     <>
       <ImageWrap style={{ marginTop: rhythm(4) }}>
-        <img
-          src={`${process.env.GATSBY_FILE_SERVER}/project/sound-spot/--3-min.png`}
-          alt=""
-        />
+        <img src={`${process.env.GATSBY_FILE_SERVER}/--3-min.png`} alt="" />
       </ImageWrap>
       <SectionWrap>
         <SectionTitleRow>
@@ -48,10 +45,7 @@ const SolutionFunctionSection = () => {
         </Row>
       </SectionWrap>
       <ImageWrap style={{ marginBottom: rhythm(4) }}>
-        <img
-          src={`${process.env.GATSBY_FILE_SERVER}/project/sound-spot/-min-1.jpg`}
-          alt=""
-        />
+        <img src={`${process.env.GATSBY_FILE_SERVER}/-min-1.jpg`} alt="" />
       </ImageWrap>
     </>
   );

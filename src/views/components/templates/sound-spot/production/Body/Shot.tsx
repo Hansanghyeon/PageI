@@ -6,20 +6,16 @@ const SoundspotBodyShot = () => {
   return (
     <>
       <AnimationRowImg
-        imgSrc={`${process.env.GATSBY_FILE_SERVER}/project/sound-spot/-.3-min.png`}
+        imgSrc={`${process.env.GATSBY_FILE_SERVER}/-.3-min.png`}
+      />
+      <AnimationRowImg imgSrc={`${process.env.GATSBY_FILE_SERVER}/_-min.png`} />
+      <AnimationRowImg
+        imgSrc={`${process.env.GATSBY_FILE_SERVER}/sound-spot---min-1.png`}
       />
       <AnimationRowImg
-        imgSrc={`${process.env.GATSBY_FILE_SERVER}/project/sound-spot/_-min.png`}
+        imgSrc={`${process.env.GATSBY_FILE_SERVER}/-12-min-1.png`}
       />
-      <AnimationRowImg
-        imgSrc={`${process.env.GATSBY_FILE_SERVER}/project/sound-spot/sound-spot---min-1.png`}
-      />
-      <AnimationRowImg
-        imgSrc={`${process.env.GATSBY_FILE_SERVER}/project/sound-spot/-12-min-1.png`}
-      />
-      <AnimationRowImg
-        imgSrc={`${process.env.GATSBY_FILE_SERVER}/project/sound-spot/_-min.png`}
-      />
+      <AnimationRowImg imgSrc={`${process.env.GATSBY_FILE_SERVER}/_-min.png`} />
     </>
   );
 };

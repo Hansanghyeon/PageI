@@ -6,7 +6,7 @@ import HoverOverCard from '@atom/card/HoverOver';
 import { media } from 'styled-bootstrap-grid';
 
 const Section = styled.div`
-  background-image: url(${process.env.GATSBY_FILE_SERVER}/site/main/kakaotalk_photo_2019-05-25-13-58-27.jpeg);
+  background-image: url(${process.env.GATSBY_FILE_SERVER}/kakaotalk_photo_2019-05-25-13-58-27.jpeg);
   background-size: cover;
 `;
 
@@ -37,21 +37,21 @@ const GallerySection = () => (
     <InnerSection>
       <StyledLink direction="left" to="/project/butterfleye">
         <HoverOverCard
-          imgSrc={`${process.env.GATSBY_FILE_SERVER}/project/butterfleye/butterfleye6.jpg`}
+          imgSrc={`${process.env.GATSBY_FILE_SERVER}/butterfleye6.jpg`}
           title="Butterfleye"
           content="FASHION EYEWEAR"
         />
       </StyledLink>
       <StyledLink direction="left" to="/project/modular">
         <HoverOverCard
-          imgSrc={`${process.env.GATSBY_FILE_SERVER}/project/modular/modulegoggle.jpg`}
+          imgSrc={`${process.env.GATSBY_FILE_SERVER}/modulegoggle.jpg`}
           title="MODULAR"
           content="SMART INDUSTRIAL SAFETY GOGGLE"
         />
       </StyledLink>
       <StyledLink direction="left" to="/project/sound-spot">
         <HoverOverCard
-          imgSrc={`${process.env.GATSBY_FILE_SERVER}/project/sound-spot/-.124-min.jpg`}
+          imgSrc={`${process.env.GATSBY_FILE_SERVER}/-.124-min.jpg`}
           title="Sound Spot"
           content="Sound signage film directional speaker"
         />

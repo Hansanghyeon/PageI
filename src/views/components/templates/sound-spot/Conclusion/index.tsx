@@ -23,10 +23,7 @@ const SoundspotConclusion = () => (
     <Container fluid>
       <Row>
         <Col col noGutter>
-          <img
-            src={`${process.env.GATSBY_FILE_SERVER}/project/sound-spot/-14-min-1.png`}
-            alt=""
-          />
+          <img src={`${process.env.GATSBY_FILE_SERVER}/-14-min-1.png`} alt="" />
         </Col>
       </Row>
     </Container>

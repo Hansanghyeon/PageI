@@ -33,7 +33,7 @@ const SoundspotBody = () => {
       <StyledWrap fluid style={{ padding: 0 }}>
         <ImageWrap>
           <img
-            src={`${process.env.GATSBY_FILE_SERVER}/project/sound-spot/_1920-min-1.png`}
+            src={`${process.env.GATSBY_FILE_SERVER}/_1920-min-1.png`}
             alt=""
           />
         </ImageWrap>
