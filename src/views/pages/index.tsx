@@ -4,7 +4,7 @@ import { createGlobalStyle } from 'styled-components';
 
 import SEO from '@view/components/seo';
 import GallerySection from '@template/GallerySection';
-import BioSection from '@template/BioSection';
+// import BioSection from '@template/BioSection';
 import '@view/backup/Scss/fullpage.scss';
 
 const UniquePageWrap = createGlobalStyle`
@@ -43,7 +43,7 @@ const IndexPage = () => (
             <UniquePageWrap />
             <ReactFullpage.Wrapper>
               <GallerySection />
-              <BioSection />
+              {/* <BioSection /> */}
             </ReactFullpage.Wrapper>
           </>
         );
