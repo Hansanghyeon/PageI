@@ -10,6 +10,13 @@ const GlobalStyle = createGlobalStyle`
   body {
     margin: 0;
   }
+  img {
+    margin: 0;
+    width: 100%;
+  }
+  * {
+    box-sizing: border-box;
+  }
 `;
 
 const MainLayout: React.FC = ({ children }) => {
