@@ -1,6 +1,7 @@
 import React from 'react';
 import { createGlobalStyle } from 'styled-components';
 
+import MainLayout from '@view/components/layouts/Main';
 import IntroSection from '@template/modular/intro';
 import BackgroundSection from '@template/modular/background';
 import InsightSection from '@template/modular/insight';
@@ -25,14 +26,16 @@ const GlobalStyle = createGlobalStyle`
 `;
 const Modular = () => (
   <>
-    <GlobalStyle />
-    <IntroSection />
-    <BackgroundSection />
-    <InsightSection />
-    <ConceptSection />
-    <ConclusionSection />
-    <ProductSection />
-    <TailSection />
+    <MainLayout>
+      <GlobalStyle />
+      <IntroSection />
+      <BackgroundSection />
+      <InsightSection />
+      <ConceptSection />
+      <ConclusionSection />
+      <ProductSection />
+      <TailSection />
+    </MainLayout>
   </>
 );
 
