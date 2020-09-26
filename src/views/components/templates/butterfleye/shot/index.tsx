@@ -18,7 +18,7 @@ const Shot = () => {
     `${process.env.GATSBY_FILE_SERVER}/bu-eye-002.jpg`,
     `${process.env.GATSBY_FILE_SERVER}/butterfleye1.jpg`,
     `${process.env.GATSBY_FILE_SERVER}/bu-eye-003-scaled-1.jpg`,
-    `${process.env.GATSBY_FILE_SERVER}/2---scaled-1.jpg`,
+    `${process.env.GATSBY_FILE_SERVER}/2-scaled-1.jpg`,
   ];
   const aniSingleImg = [
     `${process.env.GATSBY_FILE_SERVER}/butterfleye3-1.jpg`,

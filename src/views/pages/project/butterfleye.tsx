@@ -6,8 +6,8 @@ import MainLayout from '@view/components/layouts/Main';
 
 const Butterfleye = () => (
   <>
-    <IntroSection />
     <MainLayout>
+      <IntroSection />
       <Shot />
     </MainLayout>
   </>
