@@ -1,10 +1,10 @@
 import React from 'react';
 // Components
-import { AnimationRowImg2 } from '@molecule/AnimationRowImg';
+import AnimationRowImg from '@molecule/AnimationRowImg';
 
 const SoundspotHolderShot = () => (
   <>
-    <AnimationRowImg2
+    <AnimationRowImg
       fluid
       imgSrc={[
         `${process.env.GATSBY_FILE_SERVER}/131-1.jpg`,

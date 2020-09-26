@@ -2,7 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import { Container, Row, Col } from 'styled-bootstrap-grid';
 // Components
-import AnimationRowImg, { AnimationRowImg2 } from '@molecule/AnimationRowImg';
+import AnimationRowImg from '@molecule/AnimationRowImg';
 import ImageWrap from '@atom/wrap/Image';
 
 const AnimationRowImg2Wrap = styled.div`
@@ -18,7 +18,7 @@ const Shot = () => {
     `${process.env.GATSBY_FILE_SERVER}/bu-eye-002.jpg`,
     `${process.env.GATSBY_FILE_SERVER}/butterfleye1.jpg`,
     `${process.env.GATSBY_FILE_SERVER}/bu-eye-003-scaled-1.jpg`,
-    `${process.env.GATSBY_FILE_SERVER}/2---scaled-1.jpg`,
+    `${process.env.GATSBY_FILE_SERVER}/2-scaled-1.jpg`,
   ];
   const aniSingleImg = [
     `${process.env.GATSBY_FILE_SERVER}/butterfleye3-1.jpg`,
@@ -28,7 +28,7 @@ const Shot = () => {
   return (
     <>
       <AnimationRowImg2Wrap>
-        <AnimationRowImg2
+        <AnimationRowImg
           bgColor="transparent"
           imgSrc={[
             `${process.env.GATSBY_FILE_SERVER}/butterfleye.png`,

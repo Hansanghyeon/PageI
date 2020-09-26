@@ -1,14 +1,15 @@
-import React, { useEffect, useRef } from 'react';
+import React from 'react';
 import styled from 'styled-components';
 import { Container, Row, Col } from 'styled-bootstrap-grid';
 import { TimelineLite, Power1 } from 'gsap';
+import { InView } from 'react-intersection-observer';
 // Utils
 import { rhythm } from '@style/typography';
 // Type
 import ImageWrap, { ImageWrapType } from '@atom/wrap/Image';
 
 const CustomImageWrap = styled(ImageWrap)`
-  img {
+  .observerImg {
     opacity: 0.2;
   }
   ${Row} {
@@ -16,80 +17,58 @@ const CustomImageWrap = styled(ImageWrap)`
   }
 `;
 
-const ImgAnimationCallback = (entries: any, observer: any) => {
-  entries.forEach((entry: any) => {
+const ImgAnimationCallback = (inView: boolean, entry: any): void => {
+  if (inView && !entry.target.attributes.style) {
     const tl = new TimelineLite();
-    if (entry.isIntersecting) {
-      tl.to([entry.target], 0.45, {
-        ease: Power1.easeOut,
-        opacity: '1',
-      });
-      observer.unobserve(entry.target);
-    }
-  });
+    tl.to([entry.target], 0.45, {
+      ease: Power1.easeOut,
+      opacity: '1',
+    });
+  }
 };
 
-interface AnimationRowImgTpye extends ImageWrapType {
+interface imgSrcProps {
   imgSrc: string;
+}
+const InViewImg: React.FC<imgSrcProps> = ({ imgSrc }: imgSrcProps) => (
+  <InView
+    as="div"
+    className="observerImg"
+    threshold={0.7}
+    onChange={ImgAnimationCallback}
+  >
+    <img src={imgSrc} alt="" />
+  </InView>
+);
+
+interface AnimationRowImgTpye extends ImageWrapType {
+  imgSrc: string | Array<string>;
+  fluid?: boolean;
 }
 const AnimationRowImg = ({
   imgSrc,
   bgColor,
   fullscreen,
-}: AnimationRowImgTpye) => {
-  const Img = useRef<HTMLImageElement>(null);
-  const imgObserver = useRef<IntersectionObserver>();
-  useEffect(() => {
-    imgObserver.current = new IntersectionObserver(ImgAnimationCallback, {
-      threshold: 0.7,
-    });
-    if (null !== Img.current) imgObserver.current.observe(Img.current);
-  }, []);
-  return (
-    <CustomImageWrap bgColor={bgColor} fullscreen={fullscreen ? true : false}>
-      <Container>
-        <Row>
-          <Col col>
-            <img src={imgSrc} alt="" ref={Img} />
-          </Col>
-        </Row>
-      </Container>
-    </CustomImageWrap>
-  );
-};
-
-interface AnimationRowImgTpye2 extends ImageWrapType {
-  imgSrc: Array<string>;
-  fluid?: boolean;
-}
-export const AnimationRowImg2 = ({
-  imgSrc,
-  bgColor,
-  fullscreen,
   fluid,
-}: AnimationRowImgTpye2) => {
-  const Img1 = useRef<HTMLImageElement>(null);
-  const Img2 = useRef<HTMLImageElement>(null);
-  const imgObserver = useRef<IntersectionObserver>();
-  useEffect(() => {
-    imgObserver.current = new IntersectionObserver(ImgAnimationCallback, {
-      threshold: 0.7,
-    });
-    if (null !== Img1.current && null !== Img2.current) {
-      imgObserver.current.observe(Img1.current);
-      imgObserver.current.observe(Img2.current);
-    }
-  });
+}: AnimationRowImgTpye) => {
   return (
     <CustomImageWrap bgColor={bgColor} fullscreen={fullscreen ? true : false}>
       <Container fluid={fluid}>
         <Row>
-          <Col col noGutter={fluid} style={{ textAlign: 'left' }}>
-            <img src={imgSrc[0]} alt="" ref={Img1} />
-          </Col>
-          <Col col noGutter={fluid} style={{ textAlign: 'right' }}>
-            <img src={imgSrc[1]} alt="" ref={Img2} />
-          </Col>
+          {Array.isArray(imgSrc) ? (
+            <>
+              <Col col noGutter={fluid} style={{ textAlign: 'left' }}>
+                <InViewImg imgSrc={imgSrc[0]} />
+              </Col>
+              <Col col noGutter={fluid} style={{ textAlign: 'right' }}>
+                <InViewImg imgSrc={imgSrc[1]} />
+              </Col>
+            </>
+          ) : (
+            <Col col>
+              <InViewImg imgSrc={imgSrc} />
+            </Col>
+          )}
         </Row>
       </Container>
     </CustomImageWrap>

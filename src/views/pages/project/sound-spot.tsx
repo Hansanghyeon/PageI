@@ -1,5 +1,6 @@
 import React from 'react';
 // Components
+import MainLayout from '@view/components/layouts/Main';
 import PlanIntroSection from '@template/sound-spot/plan/Intro';
 import ProblemSection from '@template/sound-spot/plan/Problem';
 import InsightSection from '@template/sound-spot/plan/Insight';
@@ -18,20 +19,22 @@ import SoundspotConclusion from '@template/sound-spot/Conclusion';
 
 const SoundSpot = () => (
   <>
-    <PlanIntroSection />
-    <ProblemSection />
-    <InsightSection />
-    <MotiveSection />
-    <SolutionFunctionSection />
-    <SoundspotBody />
-    <SoundspotBodyShot />
-    <SoundspotRemoteController />
-    <SoundspotRemoteControllerShot />
-    <SoundspotHolder />
-    <SoundspotHolderShot />
-    <SoundspotRubberCap />
-    <SoundspotRubberCapShot />
-    <SoundspotConclusion />
+    <MainLayout>
+      <PlanIntroSection />
+      <ProblemSection />
+      <InsightSection />
+      <MotiveSection />
+      <SolutionFunctionSection />
+      <SoundspotBody />
+      <SoundspotBodyShot />
+      <SoundspotRemoteController />
+      <SoundspotRemoteControllerShot />
+      <SoundspotHolder />
+      <SoundspotHolderShot />
+      <SoundspotRubberCap />
+      <SoundspotRubberCapShot />
+      <SoundspotConclusion />
+    </MainLayout>
   </>
 );
 

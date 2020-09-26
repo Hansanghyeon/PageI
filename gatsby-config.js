@@ -1,5 +1,5 @@
 require('dotenv').config({
-  path: `config/.env.${process.env.NODE_ENV}`,
+  path: `config/.env`,
 });
 
 module.exports = {
@@ -12,7 +12,6 @@ module.exports = {
     `gatsby-plugin-offline`,
     `gatsby-plugin-react-helmet`,
     'gatsby-plugin-typescript',
-    'gatsby-plugin-sass',
     {
       resolve: `gatsby-source-filesystem`,
       options: {
@@ -52,14 +51,6 @@ module.exports = {
         google: {
           families: ['Noto Sans KR', 'Noto Sans', 'Playfair Display'],
         },
-      },
-    },
-    {
-      resolve: `gatsby-plugin-transition-link`,
-      options: {
-        layout: require.resolve(
-          `${__dirname}/src/views/components/layouts/Main/index.tsx`,
-        ),
       },
     },
   ],
