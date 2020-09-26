@@ -18,8 +18,8 @@ const CustomImageWrap = styled(ImageWrap)`
 `;
 
 const ImgAnimationCallback = (inView: boolean, entry: any): void => {
-  const tl = new TimelineLite();
-  if (inView) {
+  if (inView && !entry.target.attributes.style) {
+    const tl = new TimelineLite();
     tl.to([entry.target], 0.45, {
       ease: Power1.easeOut,
       opacity: '1',

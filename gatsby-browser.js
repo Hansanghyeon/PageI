@@ -5,3 +5,8 @@
  */
 
 // You can delete this file if you're not using it
+exports.onClientEntry = async () => {
+  if (typeof window.IntersectionObserver === 'undefined') {
+    await import(`react-intersection-observer`);
+  }
+};

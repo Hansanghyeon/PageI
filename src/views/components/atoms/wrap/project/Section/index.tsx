@@ -8,7 +8,6 @@ const SectionWrap = styled(Container)`
   /* section base style */
   font-size: 14px;
   color: ${({ theme }) => {
-    console.log(theme);
     return theme.project.soundSpot['$blue-grey-two'];
   }};
   padding-top: ${rhythm(2)};
