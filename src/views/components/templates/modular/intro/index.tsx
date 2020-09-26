@@ -27,7 +27,7 @@ const IntroSction = () => {
         <Container>
           <Row>
             <Col col>
-              <img src={`${process.env.GATSBY_FILE_SERVER}/modulegoggle.jpg`} />
+              <img src={`${process.env.FILE_SERVER}/modulegoggle.jpg`} />
             </Col>
           </Row>
         </Container>

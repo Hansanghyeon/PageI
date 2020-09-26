@@ -4,7 +4,7 @@
   ],
   "include": [
     "./src/**/*.tsx",
-    "./src/**/*.ts",
+    "./src/**/*.ts"
   ],
   "exclude": [
     "node_modules",
@@ -14,13 +14,13 @@
   "extends": "./tsconfig.paths.json",
   "compilerOptions": {
     "target": "esnext",
-    "module": "commonjs",
+    "module": "esnext",
     "lib": [
       "DOM",
       "ES2017"
     ],
     "allowJs": true,
-    "jsx": "react",
+    "jsx": "preserve",
     "sourceMap": true,
     "noEmit": true,
     "strict": true,
@@ -29,6 +29,9 @@
     "experimentalDecorators": true,
     "emitDecoratorMetadata": true,
     "forceConsistentCasingInFileNames": true,
-    "skipLibCheck": true
+    "skipLibCheck": true,
+    "moduleResolution": "node",
+    "resolveJsonModule": true,
+    "isolatedModules": true
   }
 }

@@ -14,16 +14,16 @@ const AnimationRowImg2Wrap = styled.div`
 
 const Shot = () => {
   const singleImg = [
-    `${process.env.GATSBY_FILE_SERVER}/bu-eye-001.jpg`,
-    `${process.env.GATSBY_FILE_SERVER}/bu-eye-002.jpg`,
-    `${process.env.GATSBY_FILE_SERVER}/butterfleye1.jpg`,
-    `${process.env.GATSBY_FILE_SERVER}/bu-eye-003-scaled-1.jpg`,
-    `${process.env.GATSBY_FILE_SERVER}/2-scaled-1.jpg`,
+    `${process.env.FILE_SERVER}/bu-eye-001.jpg`,
+    `${process.env.FILE_SERVER}/bu-eye-002.jpg`,
+    `${process.env.FILE_SERVER}/butterfleye1.jpg`,
+    `${process.env.FILE_SERVER}/bu-eye-003-scaled-1.jpg`,
+    `${process.env.FILE_SERVER}/2-scaled-1.jpg`,
   ];
   const aniSingleImg = [
-    `${process.env.GATSBY_FILE_SERVER}/butterfleye3-1.jpg`,
-    `${process.env.GATSBY_FILE_SERVER}/butterfleye4realreal.jpg`,
-    `${process.env.GATSBY_FILE_SERVER}/butterfleye6.jpg`,
+    `${process.env.FILE_SERVER}/butterfleye3-1.jpg`,
+    `${process.env.FILE_SERVER}/butterfleye4realreal.jpg`,
+    `${process.env.FILE_SERVER}/butterfleye6.jpg`,
   ];
   return (
     <>
@@ -31,8 +31,8 @@ const Shot = () => {
         <AnimationRowImg
           bgColor="transparent"
           imgSrc={[
-            `${process.env.GATSBY_FILE_SERVER}/butterfleye.png`,
-            `${process.env.GATSBY_FILE_SERVER}/butterfly.jpg`,
+            `${process.env.FILE_SERVER}/butterfleye.png`,
+            `${process.env.FILE_SERVER}/butterfly.jpg`,
           ]}
         />
       </AnimationRowImg2Wrap>

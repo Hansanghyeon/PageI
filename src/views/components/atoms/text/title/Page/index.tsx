@@ -3,14 +3,14 @@ import styled from 'styled-components';
 import { media } from 'styled-bootstrap-grid';
 import { rhythm } from '@style/typography';
 
-type color = {
-  color: {
-    project: string;
-    value: string;
-  };
+type ThemeColorValueProps = {
+  project: string;
+  value: string;
 };
-
-const PageTitleText = styled.span<color>`
+export interface ColorProps {
+  color: any;
+}
+const PageTitleText = styled.span<ColorProps>`
   font-size: ${rhythm(1)};
   font-weight: 500;
   letter-spacing: 3.6px;
