@@ -2,7 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 // Components
 import Link from '@atom/Link';
-import HoverOverCard from '@atom/card/HoverOver';
+import HoverOverCard from '@bit/hansanghyeon.card.hoverover';
 import { media } from 'styled-bootstrap-grid';
 
 const Section = styled.div`
