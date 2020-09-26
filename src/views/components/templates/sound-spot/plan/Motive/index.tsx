@@ -8,7 +8,7 @@ import SectionTitleRow from '@atom/wrap/project/SectionTitleRow';
 import { rhythm } from '@style/typography';
 
 const MotiveSectionWrap = styled.div`
-  background-image: url(${process.env.GATSBY_FILE_SERVER}/2-min.png);
+  background-image: url(${process.env.FILE_SERVER}/2-min.png);
   height: 100vh;
   min-height: 812px;
   background-size: cover;

@@ -54,9 +54,7 @@ typings/
 # dotenv environment variable files
 .env.*
 
-# gatsby files
 .cache/
-public
 
 # Mac files
 .DS_Store
@@ -69,3 +67,4 @@ yarn-error.log
 .yarn-integrity
 
 .vercel
+.next

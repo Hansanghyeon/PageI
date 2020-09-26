@@ -1,20 +1,14 @@
 import React from 'react';
 import styled from 'styled-components';
-// Components
 import Link from '@atom/Link';
+// Components
 import HoverOverCard from '@bit/hansanghyeon.card.hoverover';
 import { media } from 'styled-bootstrap-grid';
 
 const Section = styled.div`
-  background-image: url(${process.env.GATSBY_FILE_SERVER}/kakaotalk_photo_2019-05-25-13-58-27.jpeg);
+  background-image: url(${process.env.FILE_SERVER}/kakaotalk_photo_2019-05-25-13-58-27.jpeg);
   background-size: cover;
-`;
-
-const StyledLink = styled(Link)`
-  width: 100%;
-  ${media.sm`
-    width: auto;
-  `}
+  min-height: 100vh;
 `;
 
 const InnerSection = styled.div`
@@ -32,30 +26,30 @@ const InnerSection = styled.div`
   `};
 `;
 
-const GallerySection = () => (
+const GallerySection: React.FC = () => (
   <Section className="section">
     <InnerSection>
-      <StyledLink direction="left" to="/project/butterfleye">
+      <Link href="/project/butterfleye">
         <HoverOverCard
-          imgSrc={`${process.env.GATSBY_FILE_SERVER}/butterfleye6.jpg`}
+          imgSrc={`${process.env.FILE_SERVER}/butterfleye6.jpg`}
           title="Butterfleye"
           content="FASHION EYEWEAR"
         />
-      </StyledLink>
-      <StyledLink direction="left" to="/project/modular">
+      </Link>
+      <Link href="/project/modular">
         <HoverOverCard
-          imgSrc={`${process.env.GATSBY_FILE_SERVER}/modulegoggle.jpg`}
+          imgSrc={`${process.env.FILE_SERVER}/modulegoggle.jpg`}
           title="MODULAR"
           content="SMART INDUSTRIAL SAFETY GOGGLE"
         />
-      </StyledLink>
-      <StyledLink direction="left" to="/project/sound-spot">
+      </Link>
+      <Link href="/project/sound-spot">
         <HoverOverCard
-          imgSrc={`${process.env.GATSBY_FILE_SERVER}/124-min.jpg`}
+          imgSrc={`${process.env.FILE_SERVER}/124-min.jpg`}
           title="Sound Spot"
           content="Sound signage film directional speaker"
         />
-      </StyledLink>
+      </Link>
     </InnerSection>
   </Section>
 );

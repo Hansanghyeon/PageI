@@ -17,7 +17,7 @@ const ConceptSection = () => {
     <Container>
       <Row>
         <img
-          src={`${process.env.GATSBY_FILE_SERVER}/modulegoggle-concept_start.png`}
+          src={`${process.env.FILE_SERVER}/modulegoggle-concept_start.png`}
           alt=""
           style={{ width: '100%', marginBottom: 0 }}
         />
@@ -49,10 +49,7 @@ const ConceptSection = () => {
           </p>
         </Col.default>
         <Col.SmallGrid col={12} md={6}>
-          <img
-            src={`${process.env.GATSBY_FILE_SERVER}/concept-001.png`}
-            alt=""
-          />
+          <img src={`${process.env.FILE_SERVER}/concept-001.png`} alt="" />
           <Text.small style={{ textAlign: 'center' }}>
             [ 야외 현장 근로자를 위한 기능 요소 ]
           </Text.small>
@@ -72,9 +69,9 @@ const ConceptSection = () => {
         </Col.default>
       </_Row.bg>
       <_Row.bg>
-        <img src={`${process.env.GATSBY_FILE_SERVER}/concept-002.png`} alt="" />
+        <img src={`${process.env.FILE_SERVER}/concept-002.png`} alt="" />
         <img
-          src={`${process.env.GATSBY_FILE_SERVER}/blueprint.png`}
+          src={`${process.env.FILE_SERVER}/blueprint.png`}
           alt=""
           style={{ marginBottom: '1rem' }}
         />
@@ -98,14 +95,14 @@ const ConceptSection = () => {
         </Col.default>
         <Col.SmallGrid col={12} md={6}>
           <img
-            src={`${process.env.GATSBY_FILE_SERVER}/concept-plus-img-001.jpeg`}
+            src={`${process.env.FILE_SERVER}/concept-plus-img-001.jpeg`}
             alt=""
           />
         </Col.SmallGrid>
       </_Row.bg>
       <Row>
         <img
-          src={`${process.env.GATSBY_FILE_SERVER}/modulegoggle-concept_end.png`}
+          src={`${process.env.FILE_SERVER}/modulegoggle-concept_end.png`}
           alt=""
           style={{ width: '100%' }}
         />

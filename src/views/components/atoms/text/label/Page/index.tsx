@@ -1,10 +1,7 @@
 import styled from 'styled-components';
 
 type color = {
-  color: {
-    project: string;
-    value: string;
-  };
+  color: any;
 };
 const PageLabelText = styled.span<color>`
   font-size: 14px;

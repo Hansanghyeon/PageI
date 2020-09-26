@@ -24,7 +24,7 @@ const InsightSection = () => {
       </Row>
       <Row>
         <Col.default col>
-          <img src={`${process.env.GATSBY_FILE_SERVER}/layer-3.jpg`} alt="" />
+          <img src={`${process.env.FILE_SERVER}/layer-3.jpg`} alt="" />
         </Col.default>
       </Row>
       <Empty />
@@ -43,7 +43,7 @@ const InsightSection = () => {
         </Col.default>
         <Col.SmallGrid col={12} md={5}>
           <img
-            src={`${process.env.GATSBY_FILE_SERVER}/smart_factory-005.png`}
+            src={`${process.env.FILE_SERVER}/smart_factory-005.png`}
             alt=""
           />
           <Text.small style={{ textAlign: 'center' }}>
@@ -72,7 +72,7 @@ const InsightSection = () => {
         </Col.default>
         <Col.SmallGrid col={12} md={5}>
           <img
-            src={`${process.env.GATSBY_FILE_SERVER}/smart_factory-006.png`}
+            src={`${process.env.FILE_SERVER}/smart_factory-006.png`}
             alt=""
           />
           <Text.small style={{ textAlign: 'center' }}>

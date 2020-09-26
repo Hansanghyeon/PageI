@@ -1,10 +1,10 @@
-import React, { useRef } from 'react';
+import React from 'react';
 import styled from 'styled-components';
 // Utils
 import { media } from 'styled-bootstrap-grid';
 import { rhythm } from '@style/typography';
 // components
-import PageTitleText from '@atom/text/title/Page';
+import PageTitleText, { ColorProps } from '@atom/text/title/Page';
 import PageDescriptionText from '@atom/text/description/Page';
 import PageLabelText from '@atom/text/label/Page';
 
@@ -43,19 +43,16 @@ const LabelWrap = styled.div`
   `}
 `;
 
-type props = {
+interface InfoProps {
   info: {
     title: string;
     label: string;
     description: string;
   };
-  color: {
-    project: string;
-    value: string;
-  };
-};
+}
+interface PageInfoProps extends ColorProps, InfoProps {}
 
-const PageInfo = ({ info, color }: props) => {
+const PageInfo: React.FC<PageInfoProps> = ({ info, color }: PageInfoProps) => {
   const { title, label, description } = info;
   return (
     <Wrap>

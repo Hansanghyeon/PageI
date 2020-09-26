@@ -10,7 +10,7 @@ import SectionTitleRow from '@atom/wrap/project/SectionTitleRow';
 const ProblemSection = () => (
   <>
     <ImageWrap>
-      <img src={`${process.env.GATSBY_FILE_SERVER}/1.png`} />
+      <img src={`${process.env.FILE_SERVER}/1.png`} />
     </ImageWrap>
     <SectionWrap>
       <SectionTitleRow>
