@@ -1,6 +1,6 @@
 import Head from 'next/head';
 // Components
-import GallerySection from '@template/GallerySection';
+import Gallery from '@template/section/Gallery';
 
 const IndexPage = () => {
   return (
@@ -8,7 +8,7 @@ const IndexPage = () => {
       <Head>
         <title>Kihyeon | Industrial designer</title>
       </Head>
-      <GallerySection />
+      <Gallery />
     </>
   );
 };
