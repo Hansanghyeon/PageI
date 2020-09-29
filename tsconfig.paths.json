@@ -29,7 +29,7 @@
       ],
       // Utilities
       "@utile/*": [
-        "src/utilites/*"
+        "src/utilities/*"
       ],
       // Models
       "@model/*": [

@@ -2,7 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import { Container, Row, Col } from 'styled-bootstrap-grid';
 import { TimelineLite, Power1 } from 'gsap';
-import { InView } from 'react-intersection-observer';
+import { Fade } from 'react-reveal';
 // Utils
 import { rhythm } from '@style/typography';
 // Type
@@ -17,35 +17,20 @@ const CustomImageWrap = styled(ImageWrap)`
   }
 `;
 
-const ImgAnimationCallback = (inView: boolean, entry: any): void => {
-  if (inView && !entry.target.attributes.style) {
-    const tl = new TimelineLite();
-    tl.to([entry.target], 0.45, {
-      ease: Power1.easeOut,
-      opacity: '1',
-    });
-  }
-};
-
 interface imgSrcProps {
   imgSrc: string;
 }
-const InViewImg: React.FC<imgSrcProps> = ({ imgSrc }: imgSrcProps) => (
-  <InView
-    as="div"
-    className="observerImg"
-    threshold={0.7}
-    onChange={ImgAnimationCallback}
-  >
+const FadeImg: React.FC<imgSrcProps> = ({ imgSrc }: imgSrcProps) => (
+  <Fade duration={3000} distance={'50%'}>
     <img src={imgSrc} alt="" />
-  </InView>
+  </Fade>
 );
 
 interface AnimationRowImgTpye extends ImageWrapType {
   imgSrc: string | Array<string>;
   fluid?: boolean;
 }
-const AnimationRowImg = ({
+const AnimationRowImg: React.FC<AnimationRowImgTpye> = ({
   imgSrc,
   bgColor,
   fullscreen,
@@ -58,15 +43,15 @@ const AnimationRowImg = ({
           {Array.isArray(imgSrc) ? (
             <>
               <Col col noGutter={fluid} style={{ textAlign: 'left' }}>
-                <InViewImg imgSrc={imgSrc[0]} />
+                <FadeImg imgSrc={imgSrc[0]} />
               </Col>
               <Col col noGutter={fluid} style={{ textAlign: 'right' }}>
-                <InViewImg imgSrc={imgSrc[1]} />
+                <FadeImg imgSrc={imgSrc[1]} />
               </Col>
             </>
           ) : (
             <Col col>
-              <InViewImg imgSrc={imgSrc} />
+              <FadeImg imgSrc={imgSrc} />
             </Col>
           )}
         </Row>
