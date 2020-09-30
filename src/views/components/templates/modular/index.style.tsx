@@ -168,3 +168,8 @@ export const Img = styled.img`
   margin-bottom: 0 !important;
   border-radius: 0;
 `;
+
+export const ImageWrap = styled.div`
+  font-size: 0 !important;
+  line-height: 0;
+`;
