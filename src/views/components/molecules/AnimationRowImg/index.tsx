@@ -20,7 +20,6 @@ const FadeAndImgWrap = styled.div`
   font-size: 0;
   img {
     width: 100%;
-    margin-bottom: 4rem;
   }
 `;
 const FadeImg: React.FC<imgSrcProps> = ({ imgSrc }: imgSrcProps) => (
