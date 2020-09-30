@@ -28,7 +28,7 @@ export const SectiontTitleText = styled(_SectiontTitleText.default)<sProps>`
   letter-spacing: 0.2em;
   font-size: ${rhythm(1)};
   line-height: 1.4;
-  font-weight: 100;
+  font-weight: 400;
   ${({ dark }) => dark && Dark_SectiontTitleText}
 `;
 

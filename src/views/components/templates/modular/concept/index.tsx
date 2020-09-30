@@ -105,7 +105,7 @@ const ConceptSection = () => {
           />
         </Col.SmallGrid>
       </Row.bg>
-      <Row>
+      <Row style={{ marginBottom: '140px' }}>
         <ImageWrap>
           <img
             src={`${process.env.FILE_SERVER}/modulegoggle-concept_end.png`}

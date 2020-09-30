@@ -9,9 +9,6 @@ import { rhythm } from '@style/typography';
 import ImageWrap, { ImageWrapType } from '@atom/wrap/Image';
 
 const CustomImageWrap = styled(ImageWrap)`
-  .observerImg {
-    opacity: 0.2;
-  }
   ${Row} {
     margin-bottom: ${rhythm(2)};
   }
@@ -22,7 +19,9 @@ interface imgSrcProps {
 }
 const FadeImg: React.FC<imgSrcProps> = ({ imgSrc }: imgSrcProps) => (
   <Fade duration={1200}>
-    <img src={imgSrc} alt="" />
+    <div style={{ fontSize: 0 }}>
+      <img src={imgSrc} alt="" />
+    </div>
   </Fade>
 );
 
