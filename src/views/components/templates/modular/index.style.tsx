@@ -145,11 +145,12 @@ export const Container = {
   dark: styled(_Container)`
     background-color: ${({ theme }) => theme.project.modular.$darkBg2};
     color: ${({ theme }) => theme.project.modular.$darkColor};
+    padding-left: 0;
+    padding-right: 0;
     img {
       max-width: 900px;
       width: 80%;
       margin-bottom: ${rhythm(4)};
-      border-radius: 4px;
     }
   `,
 };

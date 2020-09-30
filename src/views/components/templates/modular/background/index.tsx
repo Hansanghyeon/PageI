@@ -24,7 +24,11 @@ const BackgroundSection = () => {
       </Row>
       <Row>
         <Col.default col>
-          <img src={`${process.env.FILE_SERVER}/layer-4-1.jpg`} alt="" />
+          <img
+            src={`${process.env.FILE_SERVER}/layer-4-1.jpg`}
+            alt=""
+            style={{ borderRadius: '4px' }}
+          />
         </Col.default>
       </Row>
       <Empty />

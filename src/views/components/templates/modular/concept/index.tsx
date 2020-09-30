@@ -102,6 +102,7 @@ const ConceptSection = () => {
           <img
             src={`${process.env.FILE_SERVER}/concept-plus-img-001.jpeg`}
             alt=""
+            style={{ borderRadius: '4px' }}
           />
         </Col.SmallGrid>
       </Row.bg>

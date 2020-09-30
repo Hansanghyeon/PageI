@@ -21,7 +21,7 @@ const SmartModule: React.FC<props> = ({
         <img
           src={`${process.env.FILE_SERVER}/${imgSrc}`}
           alt=""
-          style={{ marginBottom: 0 }}
+          style={{ marginBottom: 0, borderRadius: '4px' }}
         />
       </Col.default>
       <Col.between col={12} md={5}>
