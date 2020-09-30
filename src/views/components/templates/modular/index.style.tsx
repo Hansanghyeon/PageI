@@ -173,4 +173,5 @@ export const Img = styled.img`
 export const ImageWrap = styled.div`
   font-size: 0 !important;
   line-height: 0;
+  width: 100%;
 `;
