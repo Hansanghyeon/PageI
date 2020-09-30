@@ -1,5 +1,5 @@
 import React from 'react';
-import { Container, Row } from 'styled-bootstrap-grid';
+import { Container } from 'styled-bootstrap-grid';
 
 import {
   SectiontTitleWrap,
@@ -9,28 +9,30 @@ import {
   Title,
   Text,
   Col,
-  _Row,
+  Row,
+  ImageWrap,
 } from '../index.style';
 
 const ConceptSection = () => {
   return (
     <Container>
       <Row>
-        <img
-          src={`${process.env.FILE_SERVER}/modulegoggle-concept_start.png`}
-          alt=""
-          style={{ width: '100%', marginBottom: 0 }}
-        />
+        <ImageWrap>
+          <img
+            src={`${process.env.FILE_SERVER}/modulegoggle-concept_start.png`}
+            style={{ width: '100%', marginBottom: 0 }}
+          />
+        </ImageWrap>
       </Row>
-      <_Row.bg>
+      <Row.bg>
         <Col.default col>
           <SectiontTitleWrap>
             <SectiontTitleText dark>CONCEPT</SectiontTitleText>
             <Type>_VISUALIZATION DATA</Type>
           </SectiontTitleWrap>
         </Col.default>
-      </_Row.bg>
-      <_Row.bg>
+      </Row.bg>
+      <Row.bg>
         <Empty />
         <Col.default col={12} md={6}>
           <Title.main>
@@ -54,8 +56,8 @@ const ConceptSection = () => {
             [ 야외 현장 근로자를 위한 기능 요소 ]
           </Text.small>
         </Col.SmallGrid>
-      </_Row.bg>
-      <_Row.bg>
+      </Row.bg>
+      <Row.bg>
         <Col.default col>
           <Title.main>
             [ 02. 디자인 프로세스를 통한{' '}
@@ -67,16 +69,19 @@ const ConceptSection = () => {
             전개하였다.
           </p>
         </Col.default>
-      </_Row.bg>
-      <_Row.bg>
-        <img src={`${process.env.FILE_SERVER}/concept-002.png`} alt="" />
-        <img
-          src={`${process.env.FILE_SERVER}/blueprint.png`}
-          alt=""
-          style={{ marginBottom: '1rem' }}
-        />
-      </_Row.bg>
-      <_Row.bg>
+      </Row.bg>
+      <Row.bg>
+        <div>
+          <img src={`${process.env.FILE_SERVER}/concept-002.png`} />
+        </div>
+        <div>
+          <img
+            src={`${process.env.FILE_SERVER}/blueprint.png`}
+            style={{ marginBottom: '1rem' }}
+          />
+        </div>
+      </Row.bg>
+      <Row.bg>
         <Col.default col={12} md={6}>
           <Title.main>
             [ 03. 사용성 경험을 위한 <span className="point">스터디 목업</span>{' '}
@@ -97,15 +102,17 @@ const ConceptSection = () => {
           <img
             src={`${process.env.FILE_SERVER}/concept-plus-img-001.jpeg`}
             alt=""
+            style={{ borderRadius: '4px' }}
           />
         </Col.SmallGrid>
-      </_Row.bg>
-      <Row>
-        <img
-          src={`${process.env.FILE_SERVER}/modulegoggle-concept_end.png`}
-          alt=""
-          style={{ width: '100%' }}
-        />
+      </Row.bg>
+      <Row style={{ marginBottom: '140px' }}>
+        <ImageWrap>
+          <img
+            src={`${process.env.FILE_SERVER}/modulegoggle-concept_end.png`}
+            style={{ width: '100%' }}
+          />
+        </ImageWrap>
       </Row>
     </Container>
   );

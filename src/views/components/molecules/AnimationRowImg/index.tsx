@@ -1,7 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
 import { Container, Row, Col } from 'styled-bootstrap-grid';
-import { TimelineLite, Power1 } from 'gsap';
 import { Fade } from 'react-reveal';
 // Utils
 import { rhythm } from '@style/typography';
@@ -9,9 +8,6 @@ import { rhythm } from '@style/typography';
 import ImageWrap, { ImageWrapType } from '@atom/wrap/Image';
 
 const CustomImageWrap = styled(ImageWrap)`
-  .observerImg {
-    opacity: 0.2;
-  }
   ${Row} {
     margin-bottom: ${rhythm(2)};
   }
@@ -20,10 +16,18 @@ const CustomImageWrap = styled(ImageWrap)`
 interface imgSrcProps {
   imgSrc: string;
 }
+const FadeAndImgWrap = styled.div`
+  font-size: 0;
+  img {
+    width: 100%;
+  }
+`;
 const FadeImg: React.FC<imgSrcProps> = ({ imgSrc }: imgSrcProps) => (
-  <Fade duration={3000} distance={'50%'}>
-    <img src={imgSrc} alt="" />
-  </Fade>
+  <FadeAndImgWrap>
+    <Fade duration={1200}>
+      <img src={imgSrc} alt="" />
+    </Fade>
+  </FadeAndImgWrap>
 );
 
 interface AnimationRowImgTpye extends ImageWrapType {

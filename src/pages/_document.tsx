@@ -28,7 +28,7 @@ class _Document extends Document {
 
   render() {
     return (
-      <html>
+      <html lang="ko">
         <Head>
           <link rel="shortcut icon" href="/favicon.png"></link>
           <link

@@ -2,7 +2,7 @@ import styled, { css } from 'styled-components';
 import {
   media,
   Col as _Col,
-  Row,
+  Row as _Row,
   Container as _Container,
 } from 'styled-bootstrap-grid';
 
@@ -28,7 +28,7 @@ export const SectiontTitleText = styled(_SectiontTitleText.default)<sProps>`
   letter-spacing: 0.2em;
   font-size: ${rhythm(1)};
   line-height: 1.4;
-  font-weight: 100;
+  font-weight: 400;
   ${({ dark }) => dark && Dark_SectiontTitleText}
 `;
 
@@ -125,18 +125,19 @@ export const Col = {
     `}
   `,
 };
-export const _Row = {
-  bg: styled(Row)`
-    background-color: ${({ theme }) => theme.project.modular.$darkBg};
-    color: ${({ theme }) => theme.project.modular.$darkColor};
-    ${Title.main}, ${Title.post} {
-      color: ${({ theme }) => theme.project.modular.$darkColor};
-    }
-    img {
-      margin: auto;
-    }
-  `,
-};
+const RowStyled = styled(_Row)``;
+const Row = (props: any) => <RowStyled {...props}>{props.children}</RowStyled>;
+Row.bg = styled(_Row)`
+  background-color: ${({ theme }) => theme.project.modular.$darkBg};
+  color: ${({ theme }) => theme.project.modular.$darkColor};
+  ${Title.main}, ${Title.post} {
+    color: ${({ theme }) => theme.project.modular.$darkTitle};
+  }
+  img {
+    height: auto;
+  }
+`;
+export { Row };
 export const Type = styled.span``;
 
 export const Container = {
@@ -144,11 +145,12 @@ export const Container = {
   dark: styled(_Container)`
     background-color: ${({ theme }) => theme.project.modular.$darkBg2};
     color: ${({ theme }) => theme.project.modular.$darkColor};
+    padding-left: 0;
+    padding-right: 0;
     img {
       max-width: 900px;
       width: 80%;
       margin-bottom: ${rhythm(4)};
-      border-radius: 4px;
     }
   `,
 };
@@ -166,4 +168,9 @@ export const Img = styled.img`
   max-width: 100% !important;
   margin-bottom: 0 !important;
   border-radius: 0;
+`;
+
+export const ImageWrap = styled.div`
+  font-size: 0 !important;
+  line-height: 0;
 `;
