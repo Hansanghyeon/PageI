@@ -1,6 +1,6 @@
 import styled from 'styled-components';
-// Components
 import { media } from 'styled-bootstrap-grid';
+// Components
 
 export const Section = styled.div`
   background-image: url(${process.env.FILE_SERVER}/kakaotalk_photo_2019-05-25-13-58-27.jpeg);
@@ -21,4 +21,11 @@ export const InnerSection = styled.div`
     padding-top: 100px;
     padding-bottom: 200px;
   `};
+
+  > a {
+    width: 100%;
+    ${media.sm`
+      width: auto;
+    `};
+  }
 `;
