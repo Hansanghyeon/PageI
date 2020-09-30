@@ -2,7 +2,7 @@ import styled, { css } from 'styled-components';
 import {
   media,
   Col as _Col,
-  Row,
+  Row as _Row,
   Container as _Container,
 } from 'styled-bootstrap-grid';
 
@@ -125,18 +125,19 @@ export const Col = {
     `}
   `,
 };
-export const _Row = {
-  bg: styled(Row)`
-    background-color: ${({ theme }) => theme.project.modular.$darkBg};
-    color: ${({ theme }) => theme.project.modular.$darkColor};
-    ${Title.main}, ${Title.post} {
-      color: ${({ theme }) => theme.project.modular.$darkColor};
-    }
-    img {
-      margin: auto;
-    }
-  `,
-};
+const RowStyled = styled(_Row)``;
+const Row = (props: any) => <RowStyled {...props}>{props.children}</RowStyled>;
+Row.bg = styled(_Row)`
+  background-color: ${({ theme }) => theme.project.modular.$darkBg};
+  color: ${({ theme }) => theme.project.modular.$darkColor};
+  ${Title.main}, ${Title.post} {
+    color: ${({ theme }) => theme.project.modular.$darkTitle};
+  }
+  img {
+    height: auto;
+  }
+`;
+export { Row };
 export const Type = styled.span``;
 
 export const Container = {
