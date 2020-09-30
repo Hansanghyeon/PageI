@@ -21,7 +21,7 @@ interface imgSrcProps {
   imgSrc: string;
 }
 const FadeImg: React.FC<imgSrcProps> = ({ imgSrc }: imgSrcProps) => (
-  <Fade duration={3000} distance={'50%'}>
+  <Fade duration={1200}>
     <img src={imgSrc} alt="" />
   </Fade>
 );
