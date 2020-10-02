@@ -25,17 +25,25 @@ const Shot = () => {
     `${process.env.FILE_SERVER}/butterfleye4realreal.jpg`,
     `${process.env.FILE_SERVER}/butterfleye6.jpg`,
   ];
+  const singleRowImag = [
+    `${process.env.FILE_SERVER}/butterfleye.png`,
+    `${process.env.FILE_SERVER}/butterfly.jpg`,
+  ];
   return (
     <>
-      <AnimationRowImg2Wrap>
-        <AnimationRowImg
-          bgColor="transparent"
-          imgSrc={[
-            `${process.env.FILE_SERVER}/butterfleye.png`,
-            `${process.env.FILE_SERVER}/butterfly.jpg`,
-          ]}
-        />
-      </AnimationRowImg2Wrap>
+      {singleRowImag.map(img => (
+        <ImageWrap bgColor="transparent" style={{ marginBottom: '4rem' }}>
+          <Container>
+            <Row>
+              <Col col>
+                <div>
+                  <img src={img} alt="" />
+                </div>
+              </Col>
+            </Row>
+          </Container>
+        </ImageWrap>
+      ))}
       {aniSingleImg.map(img => (
         <AnimationRowImg bgColor="transparent" imgSrc={img} />
       ))}
