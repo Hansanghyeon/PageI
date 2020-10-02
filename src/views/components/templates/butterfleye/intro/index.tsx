@@ -10,27 +10,7 @@ import PageDivider from '@atom/divider/Page';
 import ImageWrap from '@atom/wrap/Image';
 import SectionWrap from '@atom/wrap/project/Section';
 import SectionTitleRow from '@atom/wrap/project/SectionTitleRow';
-
-const WrapRoot = styled(SectionWrap)`
-  font-size: ${rhythm(1 / 3)};
-  ${media.md`
-    font-size: ${rhythm(1 / 2)};
-  `};
-`;
-
-const BodyRow = styled(Row)`
-  margin-bottom: ${rhythm(2)};
-  ${media.md`
-    margin-bottom: ${rhythm(4)};
-  `};
-  p {
-    span {
-      ${media.md`
-        display: block;
-      `};
-    }
-  }
-`;
+import { HeroImgWrap, BodyRow, WrapRoot } from './style';
 
 const IntroSection = () => {
   const infoProps = {
@@ -46,9 +26,15 @@ const IntroSection = () => {
   };
   return (
     <>
-      <ImageWrap fullscreen>
-        <img src={`${process.env.FILE_SERVER}/3-3.jpg`} />
-      </ImageWrap>
+      <HeroImgWrap>
+        <Container>
+          <Row>
+            <Col col>
+              <img src={`${process.env.FILE_SERVER}/butterfleye3-1.jpg`} />
+            </Col>
+          </Row>
+        </Container>
+      </HeroImgWrap>
       <WrapRoot>
         <SectionTitleRow>
           <Col col>
