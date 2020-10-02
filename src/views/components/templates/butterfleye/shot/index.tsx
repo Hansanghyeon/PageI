@@ -21,7 +21,7 @@ const Shot = () => {
     `${process.env.FILE_SERVER}/2-scaled-1.jpg`,
   ];
   const aniSingleImg = [
-    `${process.env.FILE_SERVER}/butterfleye3-1.jpg`,
+    `${process.env.FILE_SERVER}/3-3.jpg`,
     `${process.env.FILE_SERVER}/butterfleye4realreal.jpg`,
     `${process.env.FILE_SERVER}/butterfleye6.jpg`,
   ];
@@ -44,7 +44,9 @@ const Shot = () => {
           <Container>
             <Row>
               <Col col>
-                <img src={img} alt="" />
+                <div>
+                  <img src={img} alt="" />
+                </div>
               </Col>
             </Row>
           </Container>
