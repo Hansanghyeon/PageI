@@ -40,6 +40,7 @@ const LabelWrap = styled.div`
     justify-self: end;
     align-self: end;
     margin-bottom:0;
+    line-height: 1;
   `}
 `;
 
