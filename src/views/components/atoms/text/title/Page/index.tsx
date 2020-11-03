@@ -10,8 +10,9 @@ type ThemeColorValueProps = {
 export interface ColorProps {
   color: any;
 }
-const PageTitleText = styled.span<ColorProps>`
+const PageTitleText = styled.h1<ColorProps>`
   font-size: ${rhythm(1)};
+  margin-bottom: 0;
   font-weight: 500;
   letter-spacing: 3.6px;
   line-height: 1;

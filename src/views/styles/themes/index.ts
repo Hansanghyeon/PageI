@@ -33,6 +33,14 @@ const DefaultTheme: StyleSystem = {
       $orderColor: '#38404C',
       $tail: '#454B56',
     },
+    lenif: {
+      '$blue-grey': '#849296',
+      '$stormy-blue': '#4e8da5',
+      '$blue-grey-two': '#8c9198',
+      '$brown-grey': '#919191',
+      '$slate-grey': '#535354',
+      '$very-light-pink': '#e5e5e5',
+    },
   },
 };
 

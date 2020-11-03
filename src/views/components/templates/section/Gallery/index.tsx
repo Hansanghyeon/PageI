@@ -28,6 +28,13 @@ const Gallery: React.FC = () => (
           content="Sound signage film directional speaker"
         />
       </Link>
+      <Link href="/project/lenif">
+        <HoverOverCard
+          imgSrc={`${process.env.FILE_SERVER}/finish.png`}
+          title="Sound Spot"
+          content="Posture corrector for new lifestyle"
+        />
+      </Link>
     </InnerSection>
   </Section>
 );
