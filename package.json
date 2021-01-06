@@ -5,7 +5,7 @@
   "author": "Hansanghyeon <dandan9509@gmail.com>",
   "dependencies": {
     "@bit/hansanghyeon.card.hoverover": "^1.0.5",
-    "axios": "^0.20.0",
+    "axios": "^0.21.1",
     "dotenv": "^8.2.0",
     "framer-motion": "^2.7.5",
     "mobx": "^5.15.6",
